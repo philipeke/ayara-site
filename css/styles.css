@@ -416,11 +416,12 @@ body::after {
   text-shadow: 0 0 30px rgba(240,208,128,0.35);
 }
 .hero__logo-wrap {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 .hero__logo {
-  height: 80px;
+  height: 160px;
   width: auto;
+  filter: drop-shadow(0 0 32px rgba(194,59,90,0.25));
 }
 .hero__subtitle {
   font-family: var(--font-heading);
@@ -877,15 +878,13 @@ body::after {
 }
 .section--ahlbayt .container { margin-bottom: 3rem; }
 
-.masumeen-track-wrap { position: relative; }
+.masumeen-track-wrap { position: relative; overflow: hidden; }
 .masumeen-track {
   display: flex;
   gap: 1.5rem;
-  overflow-x: hidden;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
   padding: 1rem 2rem 1.5rem;
   transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
 }
 .masumeen-track::-webkit-scrollbar { display: none; }
 
@@ -1246,6 +1245,11 @@ body::after {
   background: rgba(38,176,112,0.08);
   border-color: rgba(38,176,112,0.2);
 }
+.spotlight-card__tag--wilaya {
+  color: var(--color-gold);
+  background: rgba(201,168,76,0.08);
+  border-color: rgba(201,168,76,0.25);
+}
 .spotlight-card__title {
   font-family: var(--font-heading);
   font-size: 1.05rem;
@@ -1304,12 +1308,12 @@ body::after {
   transform: translateY(-4px);
   box-shadow: var(--shadow-hover);
 }
-.pricing-card--barakah {
+.pricing-card--wilaya {
   background: linear-gradient(160deg, rgba(25,14,4,0.9), rgba(10,18,38,0.9));
   border-color: rgba(201,168,76,0.3);
   box-shadow: 0 0 50px rgba(201,168,76,0.08), var(--shadow-card);
 }
-.pricing-card--barakah:hover { box-shadow: 0 0 60px rgba(201,168,76,0.14), var(--shadow-hover); }
+.pricing-card--wilaya:hover { box-shadow: 0 0 60px rgba(201,168,76,0.14), var(--shadow-hover); }
 .pricing-card__badge {
   position: absolute;
   top: -14px;
@@ -1335,13 +1339,13 @@ body::after {
   align-items: center;
   gap: 0.75rem;
 }
-.pricing-card__barakah-text {
+.pricing-card__wilaya-text {
   background: linear-gradient(135deg, var(--color-gold-bright), var(--color-gold));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-.pricing-card__barakah-arabic {
+.pricing-card__wilaya-arabic {
   font-family: var(--font-arabic);
   font-size: 1.4rem;
   color: var(--color-gold);
@@ -1672,6 +1676,6 @@ body::after {
   .daily-grid { grid-template-columns: 1fr; }
   .download__buttons { flex-direction: column; align-items: center; }
   .cookie-banner__inner { flex-direction: column; }
-  .hero__logo { height: 60px; }
+  .hero__logo { height: 110px; }
   .hero__bismillah { font-size: 1.35rem; }
 }

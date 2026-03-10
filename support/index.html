@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — Ayara</title>
+  <meta name="description" content="Get help with the Ayara Shia Islamic app. FAQ, contact form, and information about OakDev & AI AB." />
+  <meta name="theme-color" content="#060c18" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="canonical" href="https://ayara.app/support" />
+  <meta property="og:title"       content="Support — Ayara" />
+  <meta property="og:description" content="Get help with Ayara — FAQ, contact, and the story behind the app." />
+  <meta property="og:type"        content="website" />
+
+  <link rel="icon" type="image/png" href="../assets/icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/legal.css" />
+  <style>
+    /* ── Support-specific overrides ─────────────────────────── */
+    .support-hero { background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(194,59,90,0.22) 0%, transparent 70%), radial-gradient(ellipse 60% 40% at 80% 60%, rgba(38,176,112,0.1) 0%, transparent 70%); }
+
+    /* About strip */
+    .about-strip {
+      padding: 5rem 0 4rem;
+      position: relative;
+    }
+    .about-strip::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 100% at 50% 50%, rgba(194,59,90,0.04) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .about-eyebrow {
+      font-family: var(--font-heading);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-crimson-bright);
+      margin-bottom: 1rem;
+    }
+    .about-title {
+      font-family: var(--font-heading);
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--color-text);
+      margin-bottom: 1.5rem;
+    }
+    .about-title em { color: var(--color-crimson-bright); font-style: normal; }
+    .about-body p {
+      font-size: 1rem;
+      line-height: 1.85;
+      color: var(--color-text-muted);
+      margin-bottom: 1.2rem;
+    }
+    .about-body p:last-child { margin-bottom: 0; }
+    .about-badge-wrap {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+    .about-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(194,59,90,0.08);
+      border: 1px solid rgba(194,59,90,0.2);
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--color-text-muted);
+    }
+    .about-badge__icon { font-size: 1rem; }
+    .about-visual {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .about-stat-card {
+      background: rgba(10, 16, 36, 0.7);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      padding: 1.5rem 2rem;
+      backdrop-filter: blur(12px);
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      transition: var(--transition);
+    }
+    .about-stat-card:hover { border-color: var(--color-border-mid); transform: translateX(4px); }
+    .about-stat-card--gold { border-color: rgba(201,168,76,0.2); }
+    .about-stat-card--green { border-color: rgba(38,176,112,0.2); }
+    .about-stat-icon {
+      font-size: 2rem;
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(194,59,90,0.1);
+      border-radius: 14px;
+    }
+    .about-stat-card--gold .about-stat-icon { background: rgba(201,168,76,0.1); }
+    .about-stat-card--green .about-stat-icon { background: rgba(38,176,112,0.1); }
+    .about-stat-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-text-subtle);
+      margin-bottom: 0.2rem;
+    }
+    .about-stat-value {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      color: var(--color-text);
+    }
+
+    /* FAQ */
+    .faq-section { padding: 5rem 0; border-top: 1px solid var(--color-border); }
+    .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 3rem; }
+    .faq-item {
+      background: rgba(10, 16, 36, 0.6);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .faq-item:hover { border-color: var(--color-border-mid); }
+    .faq-item--open { border-color: rgba(194,59,90,0.3); }
+    .faq-q {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.4rem 1.6rem;
+      cursor: pointer;
+      user-select: none;
+      font-weight: 600;
+      font-size: 0.92rem;
+      color: var(--color-text);
+      list-style: none;
+      transition: color 0.2s;
+    }
+    .faq-q::-webkit-details-marker { display: none; }
+    .faq-q:hover { color: var(--color-crimson-light); }
+    .faq-chevron {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      color: var(--color-crimson-bright);
+      transition: transform 0.3s ease;
+    }
+    .faq-item--open .faq-chevron { transform: rotate(180deg); }
+    .faq-a {
+      padding: 0 1.6rem 1.4rem;
+      font-size: 0.9rem;
+      line-height: 1.75;
+      color: var(--color-text-muted);
+    }
+    .faq-a a { color: var(--color-crimson-light); text-decoration: underline; }
+
+    /* Contact */
+    .contact-section { padding: 5rem 0; border-top: 1px solid var(--color-border); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; margin-top: 3rem; }
+    .contact-info__title {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      color: var(--color-text);
+      margin-bottom: 1rem;
+    }
+    .contact-info p { font-size: 0.92rem; line-height: 1.75; color: var(--color-text-muted); margin-bottom: 1.5rem; }
+    .contact-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 1rem 1.25rem;
+      background: rgba(10,16,36,0.6);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      margin-bottom: 0.75rem;
+      font-size: 0.88rem;
+      color: var(--color-text-muted);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    .contact-detail:hover { border-color: rgba(194,59,90,0.3); color: var(--color-text); }
+    .contact-detail__icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.05rem; }
+    .contact-detail__label { font-weight: 600; color: var(--color-text-subtle); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; display: block; margin-bottom: 0.15rem; }
+
+    /* Form */
+    .contact-form {
+      background: rgba(10,16,36,0.7);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      padding: 2.5rem;
+      backdrop-filter: blur(12px);
+    }
+    .contact-form__title {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      color: var(--color-text);
+      margin-bottom: 1.5rem;
+    }
+    .form-group { margin-bottom: 1.25rem; }
+    .form-label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--color-text-subtle);
+      margin-bottom: 0.5rem;
+    }
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      background: rgba(6,12,24,0.8);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 0.75rem 1rem;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: var(--color-text);
+      transition: border-color 0.2s;
+      outline: none;
+      box-sizing: border-box;
+    }
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      border-color: rgba(194,59,90,0.5);
+      box-shadow: 0 0 0 3px rgba(194,59,90,0.08);
+    }
+    .form-input::placeholder,
+    .form-textarea::placeholder { color: var(--color-text-subtle); }
+    .form-select { appearance: none; cursor: pointer; }
+    .form-select option { background: #0c1428; }
+    .form-textarea { resize: vertical; min-height: 130px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-submit {
+      width: 100%;
+      margin-top: 0.5rem;
+    }
+    .form-note {
+      font-size: 0.78rem;
+      color: var(--color-text-subtle);
+      margin-top: 0.75rem;
+      text-align: center;
+    }
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 2rem;
+    }
+    .form-success__icon { font-size: 3rem; margin-bottom: 1rem; }
+    .form-success__title { font-family: var(--font-heading); font-size: 1.2rem; color: var(--color-green-bright); margin-bottom: 0.5rem; }
+    .form-success__text { font-size: 0.9rem; color: var(--color-text-muted); }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .about-grid,
+      .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .faq-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .contact-form { padding: 1.75rem; }
+      .about-strip,
+      .faq-section,
+      .contact-section { padding: 3.5rem 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <canvas class="star-canvas" id="starCanvas" aria-hidden="true"></canvas>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav class="nav nav--scrolled" id="nav" role="navigation" aria-label="Main">
+    <div class="nav__container">
+      <a href="/" class="nav__logo" aria-label="Ayara — Home">
+        <img src="../assets/icon.png" alt="Ayara" class="nav__logo-img" />
+        <span class="nav__logo-name">Ayara</span>
+      </a>
+      <div class="nav__links" id="navLinks">
+        <a href="/#about"      class="nav__link">About</a>
+        <a href="/#categories" class="nav__link">Categories</a>
+        <a href="/#pricing"    class="nav__link">Plans</a>
+        <a href="/support"     class="nav__link nav__link--active">Support</a>
+      </div>
+      <div class="nav__right">
+        <a href="/#download" class="btn btn--crimson nav__cta">Download</a>
+        <button class="nav__hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       PAGE HERO
+  ============================================================ -->
+  <header class="page-hero support-hero" role="banner">
+    <div class="page-hero__inner">
+      <div class="page-hero__badge">Support Center</div>
+      <h1 class="page-hero__title">How Can We Help You?</h1>
+      <p class="page-hero__subtitle">
+        We are a small team and we care deeply about every person who uses Ayara. Find answers below, or reach us directly — we read every message.
+      </p>
+      <div class="page-hero__meta">
+        <span>📧 &nbsp;<a href="mailto:hello@oakdev.app" style="color:inherit;">hello@oakdev.app</a></span>
+        <span class="page-hero__sep">·</span>
+        <span>📍 &nbsp;Uddevalla, Sweden</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       ABOUT OAKDEV
+  ============================================================ -->
+  <section class="about-strip">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content animate-on-scroll">
+          <div class="about-eyebrow">The Team Behind Ayara</div>
+          <h2 class="about-title">Built with Care by <em>OakDev &amp; AI AB</em></h2>
+          <div class="about-body">
+            <p>
+              Ayara is built with care by OakDev &amp; AI AB, a small software company based in Uddevalla, Sweden. We are a team of developers and designers with a deep interest in faith and spirituality — and Ayara was founded to honour our dear Muslim friends in the studio, whose love for Islam and the Ahl al-Bayt inspired everything you see here.
+            </p>
+            <p>
+              Our mission is to create thoughtful, beautiful digital tools that serve the Muslim community with sincerity and respect. Every feature, every word, and every design decision is made with your spiritual journey in mind.
+            </p>
+            <p>
+              We are committed to the Shia Muslim community — to honouring the legacy of the Ahl al-Bayt (peace be upon them) and making their timeless wisdom accessible, beautiful, and personal for every believer, wherever they are in the world.
+            </p>
+          </div>
+          <div class="about-badge-wrap">
+            <div class="about-badge"><span class="about-badge__icon">🇸🇪</span> Based in Sweden</div>
+            <div class="about-badge"><span class="about-badge__icon">🤍</span> Faith-first design</div>
+            <div class="about-badge"><span class="about-badge__icon">🔒</span> Privacy by default</div>
+            <div class="about-badge"><span class="about-badge__icon">🌍</span> 8 languages</div>
+          </div>
+        </div>
+        <div class="about-visual animate-on-scroll" data-delay="150">
+          <div class="about-stat-card">
+            <div class="about-stat-icon">📿</div>
+            <div>
+              <div class="about-stat-label">What We Built</div>
+              <div class="about-stat-value">15 Spiritual Categories · 150 Reflections</div>
+            </div>
+          </div>
+          <div class="about-stat-card about-stat-card--gold">
+            <div class="about-stat-icon">✨</div>
+            <div>
+              <div class="about-stat-label">Our Focus</div>
+              <div class="about-stat-value">Wisdom of the Ahl al-Bayt (AS)</div>
+            </div>
+          </div>
+          <div class="about-stat-card about-stat-card--green">
+            <div class="about-stat-icon">🌐</div>
+            <div>
+              <div class="about-stat-label">Global Reach</div>
+              <div class="about-stat-value">English, Arabic, Persian, Urdu + 4 more</div>
+            </div>
+          </div>
+          <div class="about-stat-card">
+            <div class="about-stat-icon">🏢</div>
+            <div>
+              <div class="about-stat-label">Company</div>
+              <div class="about-stat-value">OakDev &amp; AI AB · Org. nr. 559431-6787</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FAQ
+  ============================================================ -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section__label">Frequently Asked Questions</div>
+      <h2 class="section__title">Quick <em>Answers</em></h2>
+      <p class="section__subtitle" style="text-align:center; max-width: 600px; margin: 0 auto;">
+        Everything you need to know about Ayara, reflections, and how we work. Can't find your answer? Send us a message below.
+      </p>
+
+      <div class="faq-grid">
+
+        <details class="faq-item">
+          <summary class="faq-q">
+            What are reflections?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="faq-a">
+            Reflections are Ayara's in-app token system. They have no monetary value and are the means by which you access wisdom and guidance within the app. When you download Ayara, you receive 150 reflections included with the app. You can spend them to unlock wisdoms from any of the 15 categories, or to Ask Ayara Anything (one reflection per question).
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">
+            What is the Wilaya plan?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="faq-a">
+            The Wilaya plan is Ayara's premium offering. It unlocks the full app experience: Live Qibla compass, 5 daily prayer times, prayer notifications, monthly prayer calendar, 300 additional reflections, and the ability to top up reflections anytime. Purchase it from within the app through the App Store or Google Play.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">
+            Can I use all 15 reflection categories without Wilaya?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="faq-a">
+            Yes. All 15 reflection categories are available to all users. You simply spend reflections to unlock wisdoms within them. The Standard plan includes 150 reflections, which gives you full access to all categories from day one. The Wilaya plan gives you additional reflections and the prayer tools on top.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">
+            How does "Ask Ayara Anything" work?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="faq-a">
+            Ask Ayara Anything lets you submit any question and receive an AI-generated response rooted in the Shia Islamic tradition, drawing from the Qur'an, Nahj al-Balagha, and the teachings of the Ahl al-Bayt. Each question costs one reflection. Responses are guidance for spiritual reflection — not fatwas or binding religious rulings. For binding rulings, consult a qualified marj'a.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">
+            Is my location data stored or shared?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="faq-a">
+            No. Your precise location is processed entirely on your device to calculate prayer times and Qibla direction. It is never transmitted to our servers. We do not store, share, or sell your location data. See our <a href="/privacy">Privacy Policy</a> for full details.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">
+            How do I cancel my Wilaya subscription?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="faq-a">
+            Subscriptions are managed through the App Store or Google Play. On iPhone: go to Settings → [Your Name] → Subscriptions → Ayara. On Android: open Google Play → tap your profile → Payments &amp; Subscriptions → Subscriptions → Ayara. Cancel at least 24 hours before your renewal date to avoid being charged.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">
+            How do I request a refund?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="faq-a">
+            Refunds are handled by Apple or Google, not directly by OakDev. For App Store purchases, visit <em>reportaproblem.apple.com</em>. For Google Play, visit your Play Store account → Payments &amp; Subscriptions. If you experienced a technical error that prevented you from accessing content, contact us and we will do our best to make it right.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">
+            How do I delete my account?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="faq-a">
+            You can delete your account at any time from within the Ayara app, or by following the instructions at <a href="/delete-account">ayara.app/delete-account</a>. All your personal data will be removed within 30 days. Please note that account deletion does not automatically cancel a Wilaya subscription — you must cancel that separately through the App Store or Google Play.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">
+            Are prayer times accurate?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="faq-a">
+            Ayara calculates prayer times using standard astronomical methods based on your device's GPS location. Times may differ slightly from your local mosque's schedule, especially during Ramadan and Eid. We always recommend verifying with your local Islamic authority for significant occasions.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">
+            Which languages does Ayara support?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="faq-a">
+            Ayara currently supports 8 languages: English (default), Arabic (العربية), Persian / Farsi (فارسی), Urdu (اردو), Turkish (Türkçe), Indonesian (Bahasa Indonesia), French (Français), and Azerbaijani (Azərbaycan). You can switch language at any time from the app's settings or from the language selector on our website.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">
+            Is Ayara available on both iOS and Android?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="faq-a">
+            Yes. Ayara is available on both the Apple App Store (iOS 16+) and Google Play Store (Android 8+). Download links are available on our <a href="/#download">download page</a>.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">
+            I found an issue with religious content. How do I report it?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="faq-a">
+            We take the accuracy and respectfulness of our Islamic content very seriously. If you find a translation error, a misattributed hadith, or content that does not align with authentic Shia tradition, please email us at <a href="mailto:hello@oakdev.app">hello@oakdev.app</a> with the subject line "Content Report". We will review and correct it promptly — jazakAllah khayran.
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT FORM
+  ============================================================ -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section__label">Get In Touch</div>
+      <h2 class="section__title">Send Us a <em>Message</em></h2>
+
+      <div class="contact-grid">
+
+        <!-- Info side -->
+        <div class="contact-info animate-on-scroll">
+          <h3 class="contact-info__title">We Read Every Message</h3>
+          <p>
+            Whether you have a question about a feature, found a bug, want to share feedback, or simply want to say salaam — we would love to hear from you. We aim to respond within 1–2 business days.
+          </p>
+          <p>
+            For urgent account or billing issues, please also include your account email address so we can look up your details quickly.
+          </p>
+
+          <a href="mailto:hello@oakdev.app" class="contact-detail">
+            <span class="contact-detail__icon">✉️</span>
+            <div>
+              <span class="contact-detail__label">Email</span>
+              hello@oakdev.app
+            </div>
+          </a>
+
+          <a href="tel:+46708105766" class="contact-detail">
+            <span class="contact-detail__icon">📞</span>
+            <div>
+              <span class="contact-detail__label">Phone</span>
+              +46 70 810 57 66
+            </div>
+          </a>
+
+          <div class="contact-detail" style="cursor:default;">
+            <span class="contact-detail__icon">📍</span>
+            <div>
+              <span class="contact-detail__label">Address</span>
+              OakDev &amp; AI AB, Kristevik 633<br />
+              451 96 Uddevalla, Sweden
+            </div>
+          </div>
+
+          <div class="contact-detail" style="cursor:default; margin-top: 1rem;">
+            <span class="contact-detail__icon">🕐</span>
+            <div>
+              <span class="contact-detail__label">Response Time</span>
+              We aim to reply within 1–2 business days (Mon–Fri, CET)
+            </div>
+          </div>
+        </div>
+
+        <!-- Form side -->
+        <div class="animate-on-scroll" data-delay="100">
+          <form
+            class="contact-form"
+            id="contactForm"
+            action="https://formspree.io/f/hello@oakdev.app"
+            method="POST"
+            novalidate
+          >
+            <h3 class="contact-form__title">Send a Message</h3>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="firstName">First Name</label>
+                <input class="form-input" id="firstName" name="firstName" type="text" placeholder="Ahmad" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="lastName">Last Name</label>
+                <input class="form-input" id="lastName" name="lastName" type="text" placeholder="Hussaini" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">Email Address</label>
+              <input class="form-input" id="email" name="_replyto" type="email" placeholder="your@email.com" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="subject">Subject</label>
+              <select class="form-select form-input" id="subject" name="subject">
+                <option value="" disabled selected>Choose a topic…</option>
+                <option value="general">General Question</option>
+                <option value="reflections">Reflections &amp; Content</option>
+                <option value="wilaya">Wilaya Plan / Subscription</option>
+                <option value="account">Account &amp; Login</option>
+                <option value="bug">Bug Report</option>
+                <option value="content-report">Religious Content Report</option>
+                <option value="privacy">Privacy / Data Request</option>
+                <option value="other">Something Else</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">Message</label>
+              <textarea class="form-textarea" id="message" name="message" placeholder="Write your message here — we read every word." required></textarea>
+            </div>
+
+            <!-- Honeypot spam trap -->
+            <input type="text" name="_gotcha" style="display:none;" tabindex="-1" autocomplete="off" />
+            <input type="hidden" name="_subject" value="Ayara Support Message" />
+
+            <button type="submit" class="btn btn--crimson form-submit">Send Message</button>
+            <p class="form-note">Your message is sent to hello@oakdev.app and never shared with third parties.</p>
+
+            <!-- Success state -->
+            <div class="form-success" id="formSuccess">
+              <div class="form-success__icon">🤍</div>
+              <div class="form-success__title">Message Received</div>
+              <div class="form-success__text">Jazak Allah khayran. We will reply to your email within 1–2 business days. May Allah bless you.</div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <img src="../assets/icon.png" alt="Ayara" class="footer__logo" />
+        <span class="footer__brand-name">Ayara</span>
+      </div>
+      <nav class="footer__links" aria-label="Footer navigation">
+        <a href="/support"        class="footer__link footer__link--active">Support</a>
+        <a href="/privacy"        class="footer__link">Privacy Policy</a>
+        <a href="/terms"          class="footer__link">Terms of Service</a>
+        <a href="/delete-account" class="footer__link">Delete Account</a>
+      </nav>
+      <p class="footer__copy">
+        &copy; 2026 OakDev &amp; AI AB. All rights reserved.<br />
+        <a href="mailto:hello@oakdev.app" class="footer__email">hello@oakdev.app</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       SCRIPTS
+  ============================================================ -->
+  <script>
+    // ── Stars ──────────────────────────────────────────────────
+    (function() {
+      const canvas = document.getElementById('starCanvas');
+      const ctx    = canvas.getContext('2d');
+      let stars    = [];
+
+      function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+
+      function init() {
+        resize();
+        stars = [];
+        const count = Math.floor((canvas.width * canvas.height) / 9000);
+        const palette = ['255,255,255','194,59,90','201,168,76'];
+        for (let i = 0; i < count; i++) {
+          stars.push({ x: Math.random()*canvas.width, y: Math.random()*canvas.height, r: Math.random()*1.4+0.2, a: Math.random(), speed: Math.random()*0.004+0.001, col: palette[Math.floor(Math.random()*palette.length)] });
+        }
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        stars.forEach(s => {
+          s.a += s.speed;
+          ctx.beginPath();
+          ctx.arc(s.x, s.y, s.r, 0, Math.PI*2);
+          ctx.fillStyle = `rgba(${s.col},${Math.abs(Math.sin(s.a))})`;
+          ctx.fill();
+        });
+        requestAnimationFrame(draw);
+      }
+
+      window.addEventListener('resize', init);
+      init(); draw();
+    })();
+
+    // ── Nav hamburger ──────────────────────────────────────────
+    (function() {
+      const hamburger = document.getElementById('hamburger');
+      const navLinks  = document.getElementById('navLinks');
+      hamburger.addEventListener('click', function() {
+        const open = navLinks.classList.toggle('nav__links--open');
+        hamburger.setAttribute('aria-expanded', open);
+        document.body.style.overflow = open ? 'hidden' : '';
+      });
+    })();
+
+    // ── Scroll animations ──────────────────────────────────────
+    (function() {
+      const els = document.querySelectorAll('.animate-on-scroll');
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            const delay = e.target.dataset.delay || 0;
+            setTimeout(() => e.target.classList.add('visible'), parseInt(delay));
+            obs.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      els.forEach(el => obs.observe(el));
+    })();
+
+    // ── FAQ accordion open class ───────────────────────────────
+    (function() {
+      document.querySelectorAll('.faq-item').forEach(item => {
+        item.addEventListener('toggle', function() {
+          this.classList.toggle('faq-item--open', this.open);
+        });
+      });
+    })();
+
+    // ── Contact form AJAX submit ───────────────────────────────
+    (function() {
+      const form    = document.getElementById('contactForm');
+      const success = document.getElementById('formSuccess');
+      if (!form) return;
+
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const btn = form.querySelector('button[type="submit"]');
+        btn.disabled = true;
+        btn.textContent = 'Sending…';
+
+        try {
+          const res = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+          });
+
+          if (res.ok) {
+            // Show success, hide form fields
+            Array.from(form.children).forEach(el => {
+              if (el !== success) el.style.display = 'none';
+            });
+            success.style.display = 'block';
+          } else {
+            btn.disabled = false;
+            btn.textContent = 'Send Message';
+            alert('Something went wrong. Please email us directly at hello@oakdev.app');
+          }
+        } catch {
+          btn.disabled = false;
+          btn.textContent = 'Send Message';
+          alert('Could not send message. Please email us at hello@oakdev.app');
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

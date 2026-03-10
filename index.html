@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ayara — Daily Shia Islamic Wisdom, Prayer &amp; Reflection</title>
+  <meta name="description" content="Ayara is your daily companion for Shia Islamic wisdom, prayers, and reflection. Receive timeless teachings from the Ahl al-Bayt — every single day." />
+  <meta name="theme-color" content="#060c18" />
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="Ayara — Daily Shia Islamic Wisdom &amp; Reflection" />
+  <meta property="og:description" content="Receive daily wisdom from the Ahl al-Bayt, heartfelt prayers, and personal reflection rooted in the beautiful tradition of Shia Islam." />
+  <meta property="og:image"       content="assets/logo.png" />
+  <meta property="og:type"        content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/icon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Star canvas -->
+  <canvas class="star-canvas" id="starCanvas" aria-hidden="true"></canvas>
+
+  <!-- ============================================================
+       COOKIE CONSENT
+  ============================================================ -->
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie consent">
+    <div class="cookie-banner__inner">
+      <div class="cookie-banner__text">
+        <span class="cookie-banner__icon" aria-hidden="true">🍃</span>
+        <p data-i18n="cookie.text">
+          We use cookies to enhance your experience and remember your preferences.
+          By continuing you agree to our
+          <a href="/privacy" data-i18n="cookie.privacy">Privacy Policy</a> and
+          <a href="/terms" data-i18n="cookie.terms">Terms of Service</a>.
+        </p>
+      </div>
+      <div class="cookie-banner__actions">
+        <button class="btn btn--outline btn--sm" id="cookieDecline" data-i18n="cookie.decline">Decline</button>
+        <button class="btn btn--gold btn--sm" id="cookieAccept" data-i18n="cookie.accept">Accept</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Main">
+    <div class="nav__container">
+
+      <a href="/" class="nav__logo" aria-label="Ayara — Home">
+        <img src="assets/icon.png" alt="Ayara" class="nav__logo-img" />
+        <span class="nav__logo-name">Ayara</span>
+      </a>
+
+      <div class="nav__links" id="navLinks">
+        <a href="#about"      class="nav__link" data-i18n="nav.about">About</a>
+        <a href="#daily"      class="nav__link" data-i18n="nav.daily">Daily</a>
+        <a href="#categories" class="nav__link" data-i18n="nav.categories">Categories</a>
+        <a href="#pricing"    class="nav__link" data-i18n="nav.plans">Plans</a>
+        <a href="/support"    class="nav__link" data-i18n="nav.support">Support</a>
+      </div>
+
+      <div class="nav__right">
+        <div class="nav__lang" id="langSwitcher">
+          <button class="nav__lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
+            <span class="lang-flag" id="langFlag">🇬🇧</span>
+            <span class="lang-code" id="langCode">EN</span>
+            <span class="lang-chevron" aria-hidden="true">▾</span>
+          </button>
+          <div class="nav__lang-dropdown" id="langDropdown" role="listbox" aria-label="Select language">
+            <button class="nav__lang-option" data-lang="en" role="option"><span class="opt-flag">🇬🇧</span><span class="opt-name">English</span></button>
+            <button class="nav__lang-option" data-lang="ar" role="option"><span class="opt-flag">🇸🇦</span><span class="opt-name">العربية</span></button>
+            <button class="nav__lang-option" data-lang="fa" role="option"><span class="opt-flag">🇮🇷</span><span class="opt-name">فارسی</span></button>
+            <button class="nav__lang-option" data-lang="ur" role="option"><span class="opt-flag">🇵🇰</span><span class="opt-name">اردو</span></button>
+            <button class="nav__lang-option" data-lang="tr" role="option"><span class="opt-flag">🇹🇷</span><span class="opt-name">Türkçe</span></button>
+            <button class="nav__lang-option" data-lang="id" role="option"><span class="opt-flag">🇮🇩</span><span class="opt-name">Indonesia</span></button>
+            <button class="nav__lang-option" data-lang="fr" role="option"><span class="opt-flag">🇫🇷</span><span class="opt-name">Français</span></button>
+            <button class="nav__lang-option" data-lang="az" role="option"><span class="opt-flag">🇦🇿</span><span class="opt-name">Azərbaycanca</span></button>
+          </div>
+        </div>
+
+        <a href="#download" class="btn btn--crimson nav__cta" data-i18n="nav.download">Download</a>
+
+        <button class="nav__hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section class="hero" id="hero" aria-label="Hero">
+    <!-- Geometric star overlay -->
+    <div class="hero__geo" aria-hidden="true">
+      <svg class="hero__geo-star" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <polygon points="100,5 120,65 185,65 133,100 154,162 100,125 46,162 67,100 15,65 80,65" fill="none" stroke="currentColor" stroke-width="0.8" opacity="0.15"/>
+        <polygon points="100,18 118,60 165,60 128,88 143,133 100,108 57,133 72,88 35,60 82,60" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.10"/>
+        <circle cx="100" cy="100" r="88" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.10"/>
+        <circle cx="100" cy="100" r="70" fill="none" stroke="currentColor" stroke-width="0.4" opacity="0.08"/>
+        <circle cx="100" cy="100" r="52" fill="none" stroke="currentColor" stroke-width="0.4" opacity="0.06"/>
+      </svg>
+    </div>
+
+    <!-- Content -->
+    <div class="hero__content">
+      <p class="hero__bismillah" lang="ar" aria-label="Bismillah ir-Rahman ir-Rahim">بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيم</p>
+
+      <div class="hero__logo-wrap">
+        <img src="assets/logo.png" alt="Ayara" class="hero__logo" />
+      </div>
+
+      <p class="hero__subtitle" data-i18n="hero.subtitle">Daily Shia Islamic Wisdom, Prayer &amp; Reflection</p>
+
+      <p class="hero__desc" data-i18n="hero.desc">
+        Begin each day in the light of the Ahl al-Bayt. Receive timeless wisdom from the Masumeen, heartfelt prayers, and personal guidance rooted in the sacred tradition of Shia Islam.
+      </p>
+
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <span class="hero__stat-number" data-count="15">15</span>
+          <span class="hero__stat-label" data-i18n="hero.stat_categories">Categories</span>
+        </div>
+        <div class="hero__stat-divider" aria-hidden="true">✦</div>
+        <div class="hero__stat">
+          <span class="hero__stat-number" data-count="150">150</span>
+          <span class="hero__stat-label" data-i18n="hero.stat_reflections">Reflections Included</span>
+        </div>
+        <div class="hero__stat-divider" aria-hidden="true">✦</div>
+        <div class="hero__stat">
+          <span class="hero__stat-number">∞</span>
+          <span class="hero__stat-label" data-i18n="hero.stat_barakah">Barakah</span>
+        </div>
+      </div>
+
+      <div class="hero__actions">
+        <a href="#" class="btn btn--store" aria-label="Download Ayara on the App Store">
+          <svg class="btn__store-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+          </svg>
+          <span>
+            <small data-i18n="btn.app_store_sub">Download on the</small>
+            <strong data-i18n="btn.app_store">App Store</strong>
+          </span>
+        </a>
+
+        <a href="#" class="btn btn--store" aria-label="Get Ayara on Google Play">
+          <svg class="btn__store-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M3.18 23.77a2 2 0 001.1-.32l12.54-7.21-2.76-2.76L3.18 23.77zM20.77 9.6L17.4 7.67l-3.07 3.07 3.07 3.07 3.4-1.95a1.66 1.66 0 000-2.26zM3 .23a1.9 1.9 0 00-.82 1.6v20.36a1.9 1.9 0 00.82 1.6l.1.08 11.4-11.4v-.27L3.1.15zM14.06 13.4L3.18.23l.08.07 10.9 10.9-3.07 3.07 3.07 3.07-10.9 10.9-.08.07z"/>
+          </svg>
+          <span>
+            <small data-i18n="btn.play_store_sub">Get it on</small>
+            <strong data-i18n="btn.play_store">Google Play</strong>
+          </span>
+        </a>
+      </div>
+
+      <div class="hero__scroll-indicator" aria-hidden="true">
+        <div class="hero__scroll-line"></div>
+        <span data-i18n="hero.discover">Discover Ayara</span>
+      </div>
+    </div>
+
+    <!-- Phone Mockup -->
+    <div class="hero__phone-wrap" aria-hidden="true">
+      <div class="hero__phone">
+        <div class="hero__phone-notch"></div>
+        <div class="hero__phone-screen">
+          <div class="phone-ui">
+            <div class="phone-ui__header">
+              <div class="phone-ui__greeting" lang="ar">اَلسَّلَامُ عَلَيْكُم</div>
+              <div class="phone-ui__date">Tuesday · 15 Rajab 1447</div>
+            </div>
+            <div class="phone-ui__card">
+              <div class="phone-ui__card-label">✦ Wisdom of Today</div>
+              <p class="phone-ui__card-text">"Do not let your difficulties fill you with anxiety — it is in the darkest nights that stars shine brightest."</p>
+              <div class="phone-ui__card-ref">Imam Ali (AS) · Nahj al-Balagha</div>
+            </div>
+            <div class="phone-ui__card phone-ui__card--imam">
+              <div class="phone-ui__card-label">✦ Imam of the Day</div>
+              <p class="phone-ui__card-name">Imam Hussain ibn Ali (AS)</p>
+              <p class="phone-ui__card-small">Sayyid al-Shuhada · Karbala</p>
+            </div>
+            <div class="phone-ui__prayer-times">
+              <div class="phone-ui__prayer">Fajr <span>04:58</span></div>
+              <div class="phone-ui__prayer phone-ui__prayer--active">Dhuhr <span>12:30</span></div>
+              <div class="phone-ui__prayer">Asr <span>16:15</span></div>
+              <div class="phone-ui__prayer">Maghrib <span>19:42</span></div>
+              <div class="phone-ui__prayer">Isha <span>21:05</span></div>
+            </div>
+            <div class="phone-ui__categories">
+              <div class="phone-ui__cat">🧭 Qibla</div>
+              <div class="phone-ui__cat">💬 Ask</div>
+              <div class="phone-ui__cat phone-ui__cat--locked">🔒 More</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Glow rings -->
+      <div class="hero__phone-glow hero__phone-glow--1" aria-hidden="true"></div>
+      <div class="hero__phone-glow hero__phone-glow--2" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       AYAT AL-TATHIR
+  ============================================================ -->
+  <section class="section section--verse" aria-label="Verse of Purification">
+    <div class="container">
+      <blockquote class="verse-block animate-on-scroll">
+        <div class="verse-block__ornament" aria-hidden="true">
+          <span>✦</span><span class="verse-block__line"></span><span>✦</span>
+        </div>
+        <p class="verse-block__arabic" lang="ar">
+          إِنَّمَا يُرِيدُ اللَّهُ لِيُذْهِبَ عَنكُمُ الرِّجْسَ أَهْلَ الْبَيْتِ وَيُطَهِّرَكُمْ تَطْهِيرًا
+        </p>
+        <p class="verse-block__text" data-i18n="verse1.text">
+          "Allah only desires to keep away impurity from you, O People of the Household, and to purify you with a thorough purification."
+        </p>
+        <cite class="verse-block__cite" data-i18n="verse1.cite">Holy Quran · Al-Ahzab 33:33 — Ayah al-Tathir</cite>
+        <div class="verse-block__ornament" aria-hidden="true">
+          <span>✦</span><span class="verse-block__line"></span><span>✦</span>
+        </div>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT / FEATURES
+  ============================================================ -->
+  <section class="section section--about" id="about" aria-label="About Ayara">
+    <div class="container">
+      <div class="section__label" data-i18n="about.label">About Ayara</div>
+      <h2 class="section__title" data-i18n-html="about.title">A Companion of <em>Light</em> from the Ahl al-Bayt</h2>
+      <p class="section__subtitle" data-i18n="about.subtitle">
+        Ayara brings the timeless wisdom of the Masumeen — the Prophet, Fatimah al-Zahra, and the 12 Imams — into the rhythm of your daily life. Authentic, deeply rooted, and beautifully delivered to your pocket.
+      </p>
+
+      <div class="features-grid">
+        <div class="feature-card animate-on-scroll" data-delay="0">
+          <span class="feature-card__icon">🕌</span>
+          <h3 class="feature-card__title" data-i18n="about.f1_title">Ahl al-Bayt Wisdom</h3>
+          <p class="feature-card__text" data-i18n="about.f1_text">Every reflection, every prayer, every word in Ayara is rooted in the teachings of the Ahl al-Bayt (AS) — the blessed household chosen and purified by Allah.</p>
+        </div>
+        <div class="feature-card animate-on-scroll" data-delay="80">
+          <span class="feature-card__icon">📖</span>
+          <h3 class="feature-card__title" data-i18n="about.f2_title">Daily Scripture</h3>
+          <p class="feature-card__text" data-i18n="about.f2_text">Receive a verse from the Holy Quran or a narration from Nahj al-Balagha and the trusted books of the Ahl al-Bayt tradition — each day, a new light.</p>
+        </div>
+        <div class="feature-card animate-on-scroll" data-delay="160">
+          <span class="feature-card__icon">🌟</span>
+          <h3 class="feature-card__title" data-i18n="about.f3_title">Imam of the Day</h3>
+          <p class="feature-card__text" data-i18n="about.f3_text">Walk alongside the 14 Masumeen. Each day, Ayara introduces you to one of the infallible Imams — their life, their legacy, and their eternal light to guide your path.</p>
+        </div>
+        <div class="feature-card animate-on-scroll" data-delay="0">
+          <span class="feature-card__icon">✨</span>
+          <h3 class="feature-card__title" data-i18n="about.f4_title">Personal Reflections</h3>
+          <p class="feature-card__text" data-i18n="about.f4_text">Choose from 15 spiritual categories and receive deeply personal wisdom in the Shia spirit — crafted for your heart, your struggle, your moment.</p>
+        </div>
+        <div class="feature-card animate-on-scroll" data-delay="80">
+          <span class="feature-card__icon">💬</span>
+          <h3 class="feature-card__title" data-i18n="about.f5_title">Ask Ayara Anything</h3>
+          <p class="feature-card__text" data-i18n="about.f5_text">A question about your deen, a hardship on your heart, something you've always wondered? Ask it. Ayara answers with wisdom rooted in the Shia tradition — directly for you.</p>
+        </div>
+        <div class="feature-card animate-on-scroll" data-delay="160">
+          <span class="feature-card__icon">🧭</span>
+          <h3 class="feature-card__title" data-i18n="about.f6_title">Qibla Compass</h3>
+          <p class="feature-card__text" data-i18n="about.f6_text">Wherever you stand in this world, face the sacred Ka'ba with certainty. Ayara's live Qibla compass is always accurate and always available — free.</p>
+        </div>
+        <div class="feature-card animate-on-scroll" data-delay="0">
+          <span class="feature-card__icon">🕐</span>
+          <h3 class="feature-card__title" data-i18n="about.f7_title">Prayer Times</h3>
+          <p class="feature-card__text" data-i18n="about.f7_text">Never miss Salah. Ayara calculates the precise times for all five daily prayers — Fajr, Dhuhr, Asr, Maghrib, and Isha — based on your exact location, every single day.</p>
+        </div>
+        <div class="feature-card animate-on-scroll" data-delay="80">
+          <span class="feature-card__icon">🔔</span>
+          <h3 class="feature-card__title" data-i18n="about.f8_title">Prayer Notifications</h3>
+          <p class="feature-card__text" data-i18n="about.f8_text">Enable gentle reminders for any or all of the five daily prayers. Choose which Salahs to be notified for — let Ayara call you at precisely the right moment.</p>
+        </div>
+        <div class="feature-card animate-on-scroll" data-delay="160">
+          <span class="feature-card__icon">📿</span>
+          <h3 class="feature-card__title" data-i18n="about.f9_title">Digital Dhikr Counter</h3>
+          <p class="feature-card__text" data-i18n="about.f9_text">A single, large tap for your dhikr. Haptic pulse with every count. Auto-resets at your chosen target with a gentle visual. SubhanAllah. Alhamdulillah. Allahu Akbar.</p>
+        </div>
+        <div class="feature-card animate-on-scroll" data-delay="0">
+          <span class="feature-card__icon">📅</span>
+          <h3 class="feature-card__title" data-i18n="about.f10_title">Prayer Calendar</h3>
+          <p class="feature-card__text" data-i18n="about.f10_text">Browse the full month of precise prayer times at a glance. Plan your days and weeks around Salah with a beautiful, location-accurate monthly calendar.</p>
+        </div>
+        <div class="feature-card animate-on-scroll" data-delay="80">
+          <span class="feature-card__icon">🌿</span>
+          <h3 class="feature-card__title" data-i18n="about.f11_title">Nahj al-Balagha</h3>
+          <p class="feature-card__text" data-i18n="about.f11_text">Draw from the ocean of Imam Ali's wisdom. Ayara weaves the sayings of Nahj al-Balagha into your daily life — the most eloquent words after the Holy Quran.</p>
+        </div>
+        <div class="feature-card animate-on-scroll" data-delay="160">
+          <span class="feature-card__icon">🤲</span>
+          <h3 class="feature-card__title" data-i18n="about.f12_title">Spiritual Growth</h3>
+          <p class="feature-card__text" data-i18n="about.f12_text">Build daily habits of reflection, dhikr, and closeness to Allah and the Ahl al-Bayt. Ayara walks with you on the path toward becoming the best version of yourself.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       DAILY SECTION
+  ============================================================ -->
+  <section class="section section--daily" id="daily" aria-label="Daily features">
+    <div class="container">
+      <div class="section__label" data-i18n="daily.label">What Awaits You Each Day</div>
+      <h2 class="section__title" data-i18n-html="daily.title">Every Morning, a New <em>Blessing</em></h2>
+
+      <div class="ornament" aria-hidden="true">✦</div>
+
+      <div class="daily-grid">
+        <div class="daily-card animate-on-scroll" data-delay="0">
+          <div class="daily-card__number" aria-hidden="true">01</div>
+          <span class="daily-card__icon">📜</span>
+          <h3 data-i18n="daily.d1_title">Daily Scripture</h3>
+          <p data-i18n="daily.d1_text">A carefully chosen verse from the Holy Quran or a narration from the Ahl al-Bayt — from Nahj al-Balagha, Sahifah al-Sajjadiyya, or the trusted books of the Imams — to illuminate your day.</p>
+        </div>
+        <div class="daily-card animate-on-scroll" data-delay="120">
+          <div class="daily-card__number" aria-hidden="true">02</div>
+          <span class="daily-card__icon">🌟</span>
+          <h3 data-i18n="daily.d2_title">Imam of the Day</h3>
+          <p data-i18n="daily.d2_text">Each day, walk beside one of the 14 Masumeen. Discover their life, their words, and their profound impact — the Prophet, Fatimah al-Zahra, and the 12 Imams whose light never fades.</p>
+        </div>
+        <div class="daily-card animate-on-scroll" data-delay="240">
+          <div class="daily-card__number" aria-hidden="true">03</div>
+          <span class="daily-card__icon">💎</span>
+          <h3 data-i18n="daily.d3_title">Personal Reflection</h3>
+          <p data-i18n="daily.d3_text">Your daily spiritual companion. A reflection crafted with wisdom and intention from the Shia tradition — speaking directly to where you are on your path today.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       AHL AL-BAYT QUOTES CAROUSEL
+  ============================================================ -->
+  <section class="section section--ahlbayt" id="ahlbayt" aria-label="Wisdom from the Ahl al-Bayt">
+    <div class="container">
+      <div class="section__label" data-i18n="ahlbayt.label">Words That Endure Forever</div>
+      <h2 class="section__title" data-i18n-html="ahlbayt.title">Wisdom from the <em>Masumeen</em></h2>
+      <p class="section__subtitle" data-i18n="ahlbayt.subtitle">
+        Ayara carries the living wisdom of the Ahl al-Bayt — words spoken by the Infallibles that have guided believers across centuries and continents.
+      </p>
+    </div>
+
+    <div class="masumeen-track-wrap" aria-label="Quotes from the Masumeen">
+      <div class="masumeen-track" id="masumeen-track">
+
+        <div class="masumeen-card">
+          <div class="masumeen-card__num">Prophet</div>
+          <p class="masumeen-card__arabic" lang="ar">إِنِّي تَارِكٌ فِيكُمُ الثَّقَلَيْنِ</p>
+          <blockquote class="masumeen-card__quote">"I am leaving among you two weighty things: the Book of Allah and my household. Hold fast to them and you shall never go astray."</blockquote>
+          <div class="masumeen-card__meta">
+            <span class="masumeen-card__name" lang="ar">النَّبِيُّ مُحَمَّد ﷺ</span>
+            <span class="masumeen-card__title">Prophet Muhammad · Hadith al-Thaqalayn</span>
+          </div>
+        </div>
+
+        <div class="masumeen-card">
+          <div class="masumeen-card__num">Fatimah</div>
+          <p class="masumeen-card__arabic" lang="ar">شِيعَتُنَا مَنِ اتَّبَعَ أَثَرَنَا</p>
+          <blockquote class="masumeen-card__quote">"Our Shia are those who, when alone, remember Allah abundantly, and who follow in our footsteps."</blockquote>
+          <div class="masumeen-card__meta">
+            <span class="masumeen-card__name" lang="ar">فَاطِمَةُ الزَّهْرَاء عليها السلام</span>
+            <span class="masumeen-card__title">Fatimah al-Zahra · Lady of Light · Bihar al-Anwar</span>
+          </div>
+        </div>
+
+        <div class="masumeen-card masumeen-card--featured">
+          <div class="masumeen-card__num">Imam I</div>
+          <p class="masumeen-card__arabic" lang="ar">لَا تَسْتَوْحِشْ طَرِيقَ الْحَقِّ مِنْ قِلَّةِ سَالِكِيهِ</p>
+          <blockquote class="masumeen-card__quote">"Do not be lonely on the path of truth because of the scarcity of those who walk it. Do not let your difficulties fill you with anxiety — it is only in the darkest nights that stars shine most brightly."</blockquote>
+          <div class="masumeen-card__meta">
+            <span class="masumeen-card__name" lang="ar">عَلِيُّ بْنُ أَبِي طَالِب عليه السلام</span>
+            <span class="masumeen-card__title">Imam Ali · Commander of the Faithful · Nahj al-Balagha</span>
+          </div>
+        </div>
+
+        <div class="masumeen-card">
+          <div class="masumeen-card__num">Imam III</div>
+          <p class="masumeen-card__arabic" lang="ar">الْمَوْتُ فِي عِزٍّ خَيْرٌ مِنَ الْحَيَاةِ فِي ذُلٍّ</p>
+          <blockquote class="masumeen-card__quote">"Death with dignity is better than a life of humiliation. I did not rise to cause mischief, but only to seek reform in my grandfather's nation."</blockquote>
+          <div class="masumeen-card__meta">
+            <span class="masumeen-card__name" lang="ar">الْحُسَيْنُ بْنُ عَلِي عليه السلام</span>
+            <span class="masumeen-card__title">Imam Hussain · Master of Martyrs · Karbala, 61 AH</span>
+          </div>
+        </div>
+
+        <div class="masumeen-card">
+          <div class="masumeen-card__num">Imam IV</div>
+          <p class="masumeen-card__arabic" lang="ar">الصَّمْتُ زَيْنُ الصَّائِمِ وَعِبَادَةُ الصَّامِتِ</p>
+          <blockquote class="masumeen-card__quote">"Silence is the adornment of the fasting person and the worship of the silent one. Do not dishonour yourself by making your tongue a vessel for sin."</blockquote>
+          <div class="masumeen-card__meta">
+            <span class="masumeen-card__name" lang="ar">عَلِيُّ بْنُ الْحُسَيْن عليه السلام</span>
+            <span class="masumeen-card__title">Imam Zayn al-Abidin · Sajjad · Sahifah al-Sajjadiyya</span>
+          </div>
+        </div>
+
+        <div class="masumeen-card">
+          <div class="masumeen-card__num">Imam VI</div>
+          <p class="masumeen-card__arabic" lang="ar">الْعِلْمُ سِلَاحٌ وَأَصْلُهُ الْعَقْلُ</p>
+          <blockquote class="masumeen-card__quote">"Knowledge is a weapon whose root is the intellect. Acquire it, for it is the means of knowing your duty toward Allah and the companion of the believer in every hardship."</blockquote>
+          <div class="masumeen-card__meta">
+            <span class="masumeen-card__name" lang="ar">جَعْفَرٌ الصَّادِق عليه السلام</span>
+            <span class="masumeen-card__title">Imam al-Sadiq · The Truthful · Usul al-Kafi</span>
+          </div>
+        </div>
+
+        <div class="masumeen-card">
+          <div class="masumeen-card__num">Imam VIII</div>
+          <p class="masumeen-card__arabic" lang="ar">الْإِيمَانُ مَعْرِفَةٌ بِالْقَلْبِ وَإِقْرَارٌ بِاللِّسَانِ وَعَمَلٌ بِالْأَرْكَانِ</p>
+          <blockquote class="masumeen-card__quote">"Faith is knowing with the heart, confessing with the tongue, and acting with the limbs. It is these three together that make a believer complete."</blockquote>
+          <div class="masumeen-card__meta">
+            <span class="masumeen-card__name" lang="ar">عَلِيٌّ الرِّضَا عليه السلام</span>
+            <span class="masumeen-card__title">Imam al-Ridha · The Contented · Uyun Akhbar al-Ridha</span>
+          </div>
+        </div>
+
+        <div class="masumeen-card">
+          <div class="masumeen-card__num">Imam XII</div>
+          <p class="masumeen-card__arabic" lang="ar">إِنَّا غَيْرُ مُهْمِلِينَ لِمُرَاعَاتِكُمْ وَلَا نَاسِينَ لِذِكْرِكُمْ</p>
+          <blockquote class="masumeen-card__quote">"Surely, we are neither neglectful of your situation nor forgetful of your remembrance. Were it not so, calamity would descend upon you and your enemies would destroy you."</blockquote>
+          <div class="masumeen-card__meta">
+            <span class="masumeen-card__name" lang="ar">الْمَهْدِيُّ الْمُنْتَظَر عجل الله فرجه</span>
+            <span class="masumeen-card__title">Imam al-Mahdi · The Awaited · Tawqi' al-Mahdi</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="masumeen-nav" aria-label="Carousel navigation">
+        <button class="masumeen-nav__btn" id="masumeen-prev" aria-label="Previous">‹</button>
+        <div class="masumeen-dots" id="masumeen-dots" role="tablist"></div>
+        <button class="masumeen-nav__btn" id="masumeen-next" aria-label="Next">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CATEGORIES
+  ============================================================ -->
+  <section class="section section--categories" id="categories" aria-label="Reflection categories">
+    <div class="container">
+      <div class="section__label" data-i18n="categories.label">15 Reflection Categories</div>
+      <h2 class="section__title" data-i18n-html="categories.title">Every Dimension of Your <em>Soul</em></h2>
+      <p class="section__subtitle" data-i18n="categories.subtitle">
+        Choose the aspect of your life where your heart seeks guidance.
+        Spend a reflection to receive deeply personal wisdom rooted in the Shia tradition.
+      </p>
+
+      <div class="categories-grid">
+        <div class="cat-card animate-on-scroll" data-delay="0">
+          <span class="cat-card__icon">🧭</span>
+          <h4 data-i18n="categories.c1">Daily Guidance</h4>
+          <span class="cat-card__arabic" lang="ar">هداية يومية</span>
+        </div>
+        <div class="cat-card animate-on-scroll" data-delay="50">
+          <span class="cat-card__icon">🕊️</span>
+          <h4 data-i18n="categories.c2">Iman &amp; Trust</h4>
+          <span class="cat-card__arabic" lang="ar">إيمان وتوكل</span>
+        </div>
+        <div class="cat-card animate-on-scroll" data-delay="100">
+          <span class="cat-card__icon">🙏</span>
+          <h4 data-i18n="categories.c3">Prayer Reflection</h4>
+          <span class="cat-card__arabic" lang="ar">صلاة وتأمل</span>
+        </div>
+        <div class="cat-card animate-on-scroll" data-delay="150">
+          <span class="cat-card__icon">🌅</span>
+          <h4 data-i18n="categories.c4">Patience &amp; Hope</h4>
+          <span class="cat-card__arabic" lang="ar">صبر وأمل</span>
+        </div>
+        <div class="cat-card animate-on-scroll" data-delay="200">
+          <span class="cat-card__icon">💧</span>
+          <h4 data-i18n="categories.c5">Seek Forgiveness</h4>
+          <span class="cat-card__arabic" lang="ar">طلب المغفرة</span>
+        </div>
+        <div class="cat-card animate-on-scroll" data-delay="250">
+          <span class="cat-card__icon">❤️</span>
+          <h4 data-i18n="categories.c6">Mercy &amp; Compassion</h4>
+          <span class="cat-card__arabic" lang="ar">رحمة وشفقة</span>
+        </div>
+        <div class="cat-card animate-on-scroll" data-delay="300">
+          <span class="cat-card__icon">💪</span>
+          <h4 data-i18n="categories.c7">Faith &amp; Strength</h4>
+          <span class="cat-card__arabic" lang="ar">قوة الإيمان</span>
+        </div>
+        <div class="cat-card animate-on-scroll" data-delay="350">
+          <span class="cat-card__icon">✨</span>
+          <h4 data-i18n="categories.c8">Grateful Heart</h4>
+          <span class="cat-card__arabic" lang="ar">قلب شاكر</span>
+        </div>
+        <div class="cat-card animate-on-scroll" data-delay="400">
+          <span class="cat-card__icon">⭐</span>
+          <h4 data-i18n="categories.c9">Life Purpose</h4>
+          <span class="cat-card__arabic" lang="ar">هدف الحياة</span>
+        </div>
+        <div class="cat-card animate-on-scroll" data-delay="450">
+          <span class="cat-card__icon">👨‍👩‍👧</span>
+          <h4 data-i18n="categories.c10">Family Ties</h4>
+          <span class="cat-card__arabic" lang="ar">صلة الرحم</span>
+        </div>
+        <div class="cat-card animate-on-scroll" data-delay="500">
+          <span class="cat-card__icon">🌿</span>
+          <h4 data-i18n="categories.c11">Inner Peace</h4>
+          <span class="cat-card__arabic" lang="ar">سكينة القلب</span>
+        </div>
+        <div class="cat-card animate-on-scroll" data-delay="550">
+          <span class="cat-card__icon">📖</span>
+          <h4 data-i18n="categories.c12">Prophet Wisdom</h4>
+          <span class="cat-card__arabic" lang="ar">حكمة الأنبياء</span>
+        </div>
+        <div class="cat-card animate-on-scroll" data-delay="600">
+          <span class="cat-card__icon">🤲</span>
+          <h4 data-i18n="categories.c13">Good Character</h4>
+          <span class="cat-card__arabic" lang="ar">حسن الخُلق</span>
+        </div>
+        <div class="cat-card animate-on-scroll" data-delay="650">
+          <span class="cat-card__icon">🛡️</span>
+          <h4 data-i18n="categories.c14">Resist Temptation</h4>
+          <span class="cat-card__arabic" lang="ar">مقاومة الإغراء</span>
+        </div>
+        <div class="cat-card animate-on-scroll" data-delay="700">
+          <span class="cat-card__icon">🌙</span>
+          <h4 data-i18n="categories.c15">Evening Dhikr</h4>
+          <span class="cat-card__arabic" lang="ar">ذكر المساء</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       LIVE QIBLA DISTANCE
+  ============================================================ -->
+  <section class="section section--qibla" id="qibla" aria-label="Qibla distance">
+    <div class="container">
+      <div class="section__label" data-i18n="qibla.label">Face the Sacred Direction</div>
+      <h2 class="section__title" data-i18n-html="qibla.title">How Far Are You from the <em>Holy Ka'ba</em>?</h2>
+      <p class="section__subtitle" data-i18n="qibla.subtitle">
+        Allow Ayara to reveal your current distance from the sacred Ka'ba in Mecca — and open the app for a live, real-time Qibla compass.
+      </p>
+
+      <div class="qibla-demo animate-on-scroll">
+        <div class="qibla-compass-wrap">
+          <div class="qibla-compass" id="qiblaCompass" aria-label="Qibla compass">
+            <svg class="qibla-compass__dial" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <!-- Outer ring -->
+              <circle cx="110" cy="110" r="105" fill="none" stroke="rgba(201,168,76,0.25)" stroke-width="1"/>
+              <circle cx="110" cy="110" r="98" fill="none" stroke="rgba(201,168,76,0.12)" stroke-width="0.5"/>
+              <!-- Tick marks -->
+              <g stroke="rgba(201,168,76,0.4)" stroke-width="1">
+                <line x1="110" y1="8" x2="110" y2="22"/>
+                <line x1="110" y1="198" x2="110" y2="212"/>
+                <line x1="8" y1="110" x2="22" y2="110"/>
+                <line x1="198" y1="110" x2="212" y2="110"/>
+              </g>
+              <g stroke="rgba(201,168,76,0.2)" stroke-width="0.5">
+                <line x1="155.6" y1="18.8" x2="149.9" y2="31.6"/>
+                <line x1="64.4" y1="18.8" x2="70.1" y2="31.6"/>
+                <line x1="201.2" y1="64.4" x2="188.4" y2="70.1"/>
+                <line x1="201.2" y1="155.6" x2="188.4" y2="149.9"/>
+                <line x1="155.6" y1="201.2" x2="149.9" y2="188.4"/>
+                <line x1="64.4" y1="201.2" x2="70.1" y2="188.4"/>
+                <line x1="18.8" y1="64.4" x2="31.6" y2="70.1"/>
+                <line x1="18.8" y1="155.6" x2="31.6" y2="149.9"/>
+              </g>
+              <!-- Cardinal labels -->
+              <text x="110" y="5" text-anchor="middle" fill="rgba(201,168,76,0.7)" font-size="8" font-family="Raleway,sans-serif">N</text>
+              <text x="110" y="220" text-anchor="middle" fill="rgba(201,168,76,0.5)" font-size="8" font-family="Raleway,sans-serif">S</text>
+              <text x="3" y="113" text-anchor="start" fill="rgba(201,168,76,0.5)" font-size="8" font-family="Raleway,sans-serif">W</text>
+              <text x="214" y="113" text-anchor="end" fill="rgba(201,168,76,0.5)" font-size="8" font-family="Raleway,sans-serif">E</text>
+              <!-- Inner geometric -->
+              <circle cx="110" cy="110" r="60" fill="none" stroke="rgba(194,59,90,0.15)" stroke-width="0.5"/>
+              <polygon points="110,52 118,100 158,110 118,120 110,168 102,120 62,110 102,100" fill="none" stroke="rgba(201,168,76,0.2)" stroke-width="0.8"/>
+            </svg>
+            <!-- Needle -->
+            <div class="qibla-compass__needle-wrap" id="qiblaNeedle">
+              <div class="qibla-compass__needle">
+                <div class="qibla-compass__needle-top">
+                  <span class="qibla-compass__kaaba" aria-label="Ka'ba">🕋</span>
+                </div>
+                <div class="qibla-compass__needle-bottom"></div>
+              </div>
+            </div>
+            <div class="qibla-compass__center" aria-hidden="true"></div>
+          </div>
+        </div>
+
+        <div class="qibla-info">
+          <div class="qibla-info__distance" id="qiblaResult">
+            <div class="qibla-info__distance-num" id="qiblaDistNum" data-i18n="qibla.tap_to_reveal">—</div>
+            <div class="qibla-info__distance-label" id="qiblaDistLabel" data-i18n="qibla.distance_label">km from the Holy Ka'ba</div>
+          </div>
+          <p class="qibla-info__location" id="qiblaLocation"></p>
+          <button class="btn btn--crimson qibla-info__btn" id="qiblaRevealBtn" data-i18n="qibla.btn_reveal">
+            <span>📍</span> Reveal My Distance
+          </button>
+          <p class="qibla-info__cta" data-i18n="qibla.app_cta">
+            Download Ayara for a live, real-time Qibla compass on your phone — always accurate, always available, completely free.
+          </p>
+          <div class="qibla-info__mecca">
+            <span class="qibla-info__mecca-icon">🕋</span>
+            <div>
+              <span class="qibla-info__mecca-name" data-i18n="qibla.mecca_name">Holy Ka'ba, Mecca</span>
+              <span class="qibla-info__mecca-coord">21.3891° N, 39.8579° E</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FEATURES SPOTLIGHT
+  ============================================================ -->
+  <section class="section section--spotlight" id="tools" aria-label="Features spotlight">
+    <div class="container">
+      <div class="section__label" data-i18n="spotlight.label">Complete Islamic Companion</div>
+      <h2 class="section__title" data-i18n-html="spotlight.title">More Than Reflection — <em>Complete</em> in Every Way</h2>
+      <p class="section__subtitle" data-i18n="spotlight.subtitle">
+        Alongside your daily wisdom and personal reflections from the Ahl al-Bayt, six powerful tools are always at your fingertips.
+      </p>
+
+      <div class="spotlight-grid">
+
+        <div class="spotlight-card animate-on-scroll" data-delay="0">
+          <div class="spotlight-card__icon-wrap spotlight-card__icon-wrap--crimson">
+            <span class="spotlight-card__icon">💬</span>
+          </div>
+          <div class="spotlight-card__body">
+            <div class="spotlight-card__tag" data-i18n="spotlight.ask_tag">1 Reflection</div>
+            <h3 class="spotlight-card__title" data-i18n="spotlight.ask_title">Ask Ayara Anything</h3>
+            <p class="spotlight-card__text" data-i18n="spotlight.ask_text">
+              A question about your deen. A hardship weighing on your heart. Something you've always wondered about in Islam. Ask it freely — Ayara responds with a thoughtful, personalised answer rooted in the authentic Shia tradition. One reflection spent, one answer received, crafted directly for you.
+            </p>
+            <ul class="spotlight-card__list">
+              <li data-i18n="spotlight.ask_li1">Ask about Quran, Nahj al-Balagha, or Shia jurisprudence</li>
+              <li data-i18n="spotlight.ask_li2">Seek guidance on personal struggles in the Shia spirit</li>
+              <li data-i18n="spotlight.ask_li3">Receive answers in your own language</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="spotlight-card animate-on-scroll" data-delay="100">
+          <div class="spotlight-card__icon-wrap spotlight-card__icon-wrap--gold">
+            <span class="spotlight-card__icon">🧭</span>
+          </div>
+          <div class="spotlight-card__body">
+            <div class="spotlight-card__tag spotlight-card__tag--free" data-i18n="spotlight.qibla_tag">Free · Always On</div>
+            <h3 class="spotlight-card__title" data-i18n="spotlight.qibla_title">Live Qibla Compass</h3>
+            <p class="spotlight-card__text" data-i18n="spotlight.qibla_text">
+              Wherever you find yourself — at home, travelling, or somewhere unfamiliar — face the sacred Ka'ba with certainty. Ayara's Qibla compass points toward the Holy Ka'ba in Mecca using your device's compass, precise and always available.
+            </p>
+            <ul class="spotlight-card__list">
+              <li data-i18n="spotlight.qibla_li1">Real-time compass toward the Holy Ka'ba</li>
+              <li data-i18n="spotlight.qibla_li2">Works anywhere in the world</li>
+              <li data-i18n="spotlight.qibla_li3">No setup required — always free</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="spotlight-card animate-on-scroll" data-delay="200">
+          <div class="spotlight-card__icon-wrap spotlight-card__icon-wrap--gold">
+            <span class="spotlight-card__icon">🕐</span>
+          </div>
+          <div class="spotlight-card__body">
+            <div class="spotlight-card__tag spotlight-card__tag--free" data-i18n="spotlight.prayer_tag">Free · Daily</div>
+            <h3 class="spotlight-card__title" data-i18n="spotlight.prayer_title">5 Daily Prayer Times</h3>
+            <p class="spotlight-card__text" data-i18n="spotlight.prayer_text">
+              Salah is the pillar of faith. Never miss a prayer. Ayara calculates and displays the precise times for all five daily prayers based on your exact location — Fajr, Dhuhr, Asr, Maghrib, and Isha — refreshed every day.
+            </p>
+            <ul class="spotlight-card__list">
+              <li data-i18n="spotlight.prayer_li1">Fajr · Dhuhr · Asr · Maghrib · Isha</li>
+              <li data-i18n="spotlight.prayer_li2">Location-accurate prayer times</li>
+              <li data-i18n="spotlight.prayer_li3">Displayed clearly every single day</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="spotlight-card animate-on-scroll" data-delay="0">
+          <div class="spotlight-card__icon-wrap spotlight-card__icon-wrap--gold">
+            <span class="spotlight-card__icon">🔔</span>
+          </div>
+          <div class="spotlight-card__body">
+            <div class="spotlight-card__tag spotlight-card__tag--free" data-i18n="spotlight.notif_tag">Free · Optional</div>
+            <h3 class="spotlight-card__title" data-i18n="spotlight.notif_title">Prayer Notifications</h3>
+            <p class="spotlight-card__text" data-i18n="spotlight.notif_text">
+              Stay connected to Salah throughout your day. Choose notifications for any — or all — of the five daily prayers and let Ayara gently call you at the precise prayer time for your location.
+            </p>
+            <ul class="spotlight-card__list">
+              <li data-i18n="spotlight.notif_li1">Notifications for all 5 daily prayers</li>
+              <li data-i18n="spotlight.notif_li2">Choose exactly which prayers to be reminded of</li>
+              <li data-i18n="spotlight.notif_li3">Arrives at the precise prayer time for your location</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="spotlight-card animate-on-scroll" data-delay="100">
+          <div class="spotlight-card__icon-wrap spotlight-card__icon-wrap--gold">
+            <span class="spotlight-card__icon">📿</span>
+          </div>
+          <div class="spotlight-card__body">
+            <div class="spotlight-card__tag spotlight-card__tag--free" data-i18n="spotlight.tasbeeh_tag">Free · Always On</div>
+            <h3 class="spotlight-card__title" data-i18n="spotlight.tasbeeh_title">Digital Dhikr Counter</h3>
+            <p class="spotlight-card__text" data-i18n="spotlight.tasbeeh_text">
+              One large tap target at the centre of your screen. Each tap increments your dhikr count with a gentle haptic pulse. Reach your target and Ayara resets with a soft visual. Choose your phrase: SubhanAllah, Alhamdulillah, Allahu Akbar, or beloved Shia formulas like Ya Ali and Ya Hussain.
+            </p>
+            <ul class="spotlight-card__list">
+              <li data-i18n="spotlight.tasbeeh_li1">Haptic feedback on every tap</li>
+              <li data-i18n="spotlight.tasbeeh_li2">Auto-resets at your target (33, 99…) with a gentle cue</li>
+              <li data-i18n="spotlight.tasbeeh_li3">Set your target and choose your dhikr phrase</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="spotlight-card animate-on-scroll" data-delay="200">
+          <div class="spotlight-card__icon-wrap spotlight-card__icon-wrap--gold">
+            <span class="spotlight-card__icon">📅</span>
+          </div>
+          <div class="spotlight-card__body">
+            <div class="spotlight-card__tag spotlight-card__tag--free" data-i18n="spotlight.calendar_tag">Free · Monthly</div>
+            <h3 class="spotlight-card__title" data-i18n="spotlight.calendar_title">Monthly Prayer Calendar</h3>
+            <p class="spotlight-card__text" data-i18n="spotlight.calendar_text">
+              See every prayer time for every day of the coming month at a glance. Fajr to Isha, day by day — all calculated for your exact location. Plan your schedule, prepare for travel, or simply stay aware of how each day unfolds in the light of prayer.
+            </p>
+            <ul class="spotlight-card__list">
+              <li data-i18n="spotlight.calendar_li1">Full month view of all 5 daily prayer times</li>
+              <li data-i18n="spotlight.calendar_li2">Location-accurate and updated automatically</li>
+              <li data-i18n="spotlight.calendar_li3">Plan your entire month around Salah</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       IMAM HUSSAIN QUOTE
+  ============================================================ -->
+  <section class="section section--verse section--verse-crimson" aria-label="Imam Hussain quote">
+    <div class="container">
+      <blockquote class="verse-block verse-block--crimson animate-on-scroll">
+        <div class="verse-block__ornament" aria-hidden="true">
+          <span>✦</span><span class="verse-block__line"></span><span>✦</span>
+        </div>
+        <p class="verse-block__arabic" lang="ar">هَيْهَاتَ مِنَّا الذِّلَّةُ</p>
+        <p class="verse-block__text" data-i18n="verse2.text">
+          "Never shall we submit to humiliation. Allah refuses it for us, His Messenger refuses it, and so do the believers."
+        </p>
+        <cite class="verse-block__cite" data-i18n="verse2.cite">Imam Hussain ibn Ali (AS) · Day of Ashura, Karbala</cite>
+        <div class="verse-block__ornament" aria-hidden="true">
+          <span>✦</span><span class="verse-block__line"></span><span>✦</span>
+        </div>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PRICING
+  ============================================================ -->
+  <section class="section section--pricing" id="pricing" aria-label="Plans and pricing">
+    <div class="container">
+      <div class="section__label" data-i18n="pricing.label">Choose Your Path</div>
+      <h2 class="section__title" data-i18n-html="pricing.title">Begin with <em>Standard</em>, Flourish with <em>Barakah</em></h2>
+      <p class="section__subtitle" style="text-align:center;" data-i18n="pricing.subtitle">
+        Every Muslim deserves access to the wisdom of the Ahl al-Bayt. Start with what is included, and when you are ready — unlock the full abundance of Ayara.
+      </p>
+
+      <div class="pricing-grid">
+
+        <!-- Standard -->
+        <div class="pricing-card animate-on-scroll" data-delay="0">
+          <div class="pricing-card__header">
+            <div class="pricing-card__tier" data-i18n="pricing.std_tier">Standard</div>
+            <div class="pricing-card__price" data-i18n="pricing.std_price">Included with the app &nbsp;·&nbsp; 150 reflections</div>
+            <p class="pricing-card__desc" data-i18n="pricing.std_desc">When you download Ayara you receive 150 reflections to explore wisdom from the Ahl al-Bayt — your first steps on the illuminated path.</p>
+          </div>
+          <ul class="pricing-card__features">
+            <li data-i18n="pricing.std_f1">✓ &nbsp;Daily Scripture (Quran &amp; Ahl al-Bayt)</li>
+            <li data-i18n="pricing.std_f2">✓ &nbsp;Imam of the Day (14 Masumeen)</li>
+            <li data-i18n="pricing.std_f3">✓ &nbsp;Daily Personal Reflection</li>
+            <li data-i18n="pricing.std_f4">✓ &nbsp;Live Qibla compass</li>
+            <li data-i18n="pricing.std_f5">✓ &nbsp;5 daily prayer times</li>
+            <li data-i18n="pricing.std_f6">✓ &nbsp;Prayer notifications</li>
+            <li data-i18n="pricing.std_f7">✓ &nbsp;Digital dhikr counter</li>
+            <li data-i18n="pricing.std_f8">✓ &nbsp;Monthly prayer calendar</li>
+            <li data-i18n="pricing.std_f9">✓ &nbsp;150 reflections included</li>
+            <li data-i18n="pricing.std_f10">✓ &nbsp;Ask Ayara Anything (uses reflections)</li>
+            <li class="pricing-card__feature--locked" data-i18n="pricing.std_f11">✗ &nbsp;All 15 reflection categories</li>
+            <li class="pricing-card__feature--locked" data-i18n="pricing.std_f12">✗ &nbsp;300 additional Barakah reflections</li>
+          </ul>
+          <a href="#download" class="btn btn--outline" data-i18n="pricing.std_btn">Download Ayara</a>
+        </div>
+
+        <!-- Barakah -->
+        <div class="pricing-card pricing-card--barakah animate-on-scroll" data-delay="150">
+          <div class="pricing-card__badge" data-i18n="pricing.bar_badge">Most Beloved</div>
+          <div class="pricing-card__header">
+            <div class="pricing-card__tier">
+              <span class="pricing-card__barakah-text">Barakah</span>
+              <span class="pricing-card__barakah-arabic" lang="ar">بَرَكَة</span>
+            </div>
+            <div class="pricing-card__price" data-i18n="pricing.bar_price">+300 reflections &nbsp;·&nbsp; Top-ups available</div>
+            <p class="pricing-card__desc" data-i18n="pricing.bar_desc">Purchase Barakah and receive 300 additional reflections on top of your Standard allowance — plus the ability to top up whenever you wish.</p>
+          </div>
+          <ul class="pricing-card__features">
+            <li data-i18n="pricing.bar_f1">✓ &nbsp;Everything in Standard</li>
+            <li data-i18n="pricing.bar_f2">✓ &nbsp;300 additional reflections</li>
+            <li data-i18n="pricing.bar_f3">✓ &nbsp;All 15 reflection categories unlocked</li>
+            <li data-i18n="pricing.bar_f4">✓ &nbsp;Ask Ayara Anything — guided by the Shia tradition</li>
+            <li data-i18n="pricing.bar_f5">✓ &nbsp;Buy reflection top-ups anytime</li>
+            <li data-i18n="pricing.bar_f6">✓ &nbsp;Early access to new Ahl al-Bayt categories</li>
+            <li data-i18n="pricing.bar_f7">✓ &nbsp;Priority access to upcoming features</li>
+          </ul>
+          <a href="#download" class="btn btn--gold" data-i18n="pricing.bar_btn">Receive Barakah</a>
+        </div>
+
+      </div>
+
+      <p class="pricing-note" data-i18n="pricing.note">
+        ✦ &nbsp; Reflections are yours to spend however you choose — on any of the 15 categories, or to Ask Ayara Anything.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       DOWNLOAD CTA
+  ============================================================ -->
+  <section class="section section--download" id="download" aria-label="Download Ayara">
+    <div class="container">
+      <div class="download-wrap">
+
+        <div class="download__icon-wrap animate-on-scroll">
+          <img src="assets/icon.png" alt="Ayara App" class="download__icon" />
+          <div class="download__icon-glow" aria-hidden="true"></div>
+        </div>
+
+        <div class="download__content animate-on-scroll" data-delay="120">
+          <div class="section__label" data-i18n="download.label">Available Now</div>
+          <h2 class="download__title" data-i18n-html="download.title">
+            Carry the Light of the<br /><em>Ahl al-Bayt With You</em>
+          </h2>
+          <p class="download__desc" data-i18n="download.desc">
+            Download Ayara and begin your daily journey of faith, reflection, and closeness to Allah and the Ahl al-Bayt — in your pocket, in your heart, every morning you wake.
+          </p>
+          <div class="download__buttons">
+            <a href="#" class="btn btn--store btn--store-lg" aria-label="Download Ayara on the App Store">
+              <svg class="btn__store-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+              </svg>
+              <span>
+                <small data-i18n="btn.app_store_sub">Download on the</small>
+                <strong data-i18n="btn.app_store">App Store</strong>
+              </span>
+            </a>
+            <a href="#" class="btn btn--store btn--store-lg" aria-label="Get Ayara on Google Play">
+              <svg class="btn__store-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M3.18 23.77a2 2 0 001.1-.32l12.54-7.21-2.76-2.76L3.18 23.77zM20.77 9.6L17.4 7.67l-3.07 3.07 3.07 3.07 3.4-1.95a1.66 1.66 0 000-2.26zM3 .23a1.9 1.9 0 00-.82 1.6v20.36a1.9 1.9 0 00.82 1.6l.1.08 11.4-11.4v-.27L3.1.15zM14.06 13.4L3.18.23l.08.07 10.9 10.9-3.07 3.07 3.07 3.07-10.9 10.9-.08.07z"/>
+              </svg>
+              <span>
+                <small data-i18n="btn.play_store_sub">Get it on</small>
+                <strong data-i18n="btn.play_store">Google Play</strong>
+              </span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__top">
+
+        <div class="footer__brand">
+          <img src="assets/icon.png" alt="Ayara" class="footer__logo" />
+          <p class="footer__tagline" data-i18n="footer.tagline">Wisdom of the Ahl al-Bayt — every single day.</p>
+          <p class="footer__arabic" lang="ar">يَا أَهْلَ الْبَيْتِ</p>
+        </div>
+
+        <nav class="footer__links" aria-label="Footer navigation">
+          <div class="footer__col">
+            <span class="footer__col-title" data-i18n="footer.col1">App</span>
+            <a href="#about"      data-i18n="footer.about">About Ayara</a>
+            <a href="#categories" data-i18n="nav.categories">Categories</a>
+            <a href="#pricing"    data-i18n="footer.plans">Plans</a>
+            <a href="#download"   data-i18n="footer.dl">Download</a>
+          </div>
+          <div class="footer__col">
+            <span class="footer__col-title" data-i18n="footer.col2">Legal</span>
+            <a href="/privacy"        data-i18n="footer.privacy">Privacy Policy</a>
+            <a href="/terms"          data-i18n="footer.terms">Terms of Service</a>
+            <a href="/delete-account" data-i18n="footer.delete">Delete Account</a>
+          </div>
+          <div class="footer__col">
+            <span class="footer__col-title" data-i18n="footer.col3">Help</span>
+            <a href="/support"          data-i18n="footer.support_center">Support Center</a>
+            <a href="/support#contact"  data-i18n="footer.contact">Contact Us</a>
+            <a href="mailto:hello@oakdev.app" class="footer__email">hello@oakdev.app</a>
+          </div>
+        </nav>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p>© 2026 OakDev &amp; AI AB. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="/privacy"        data-i18n="footer.privacy">Privacy</a>
+          <a href="/terms"          data-i18n="footer.terms">Terms</a>
+          <a href="/support"        data-i18n="footer.support_center">Support</a>
+          <a href="/delete-account" data-i18n="footer.delete">Delete Account</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

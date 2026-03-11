@@ -245,14 +245,14 @@ body::after {
   flex-shrink: 0;
 }
 .nav__logo-img {
-  width: 36px;
-  height: 36px;
+  width: 46px;
+  height: 46px;
   border-radius: 22%;
   object-fit: cover;
 }
 .nav__logo-name {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: 1.45rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   color: var(--color-gold-bright);
@@ -1653,7 +1653,22 @@ body::after {
   .hero__stats { justify-content: center; }
   .hero__actions { justify-content: center; }
   .hero__scroll-indicator { justify-content: center; }
-  .hero__phone-wrap { display: none; }
+  .hero__phone-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+  .hero__phone {
+    width: 200px;
+    height: 408px;
+    border-radius: 34px;
+  }
+  .hero__phone-notch {
+    width: 68px;
+    height: 16px;
+    top: 10px;
+  }
 
   .features-grid { grid-template-columns: 1fr 1fr; }
   .categories-grid { grid-template-columns: repeat(3, 1fr); }

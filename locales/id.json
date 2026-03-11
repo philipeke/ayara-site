@@ -59,7 +59,11 @@
     "f11_title": "Nahjul Balaghah",
     "f11_text": "Timba dari samudra hikmah Imam Ali. Ayara merajut kata-kata Nahjul Balaghah ke dalam kehidupan harian Anda — kalam paling fasih setelah Al-Qur'an.",
     "f12_title": "Pertumbuhan Spiritual",
-    "f12_text": "Bangun kebiasaan harian refleksi, dzikir, dan kedekatan dengan Allah dan Ahlul Bait. Ayara berjalan bersama Anda menuju versi terbaik diri Anda."
+    "f12_text": "Bangun kebiasaan harian refleksi, dzikir, dan kedekatan dengan Allah dan Ahlul Bait. Ayara berjalan bersama Anda menuju versi terbaik diri Anda.",
+    "f13_title": "Kalender Islam",
+    "f13_text": "Tetap selaras dengan tahun Hijriah. Lihat bulan-bulan suci, peringatan Syiah, dan tanggal lahir serta syahid 14 Maksum — agar setiap hari suci selalu dalam pandangan.",
+    "f14_title": "Doa & Ziarah",
+    "f14_text": "Mendekatkan diri kepada Allah dan para Maksum melalui kata-kata suci yang mereka tinggalkan untuk kita. Doa dan ziarah autentik dari tradisi Ahlul Bait — untuk setiap kebutuhan, setiap kesempatan, dan setiap kerinduan hati."
   },
   "daily": {
     "label": "Apa yang Menanti Anda Setiap Hari",
@@ -112,7 +116,7 @@
   "spotlight": {
     "label": "Teman Islam Lengkap",
     "title": "Lebih dari Sekadar Refleksi — <em>Lengkap</em> di Segala Hal",
-    "subtitle": "Selain hikmah harian dan refleksi pribadi dari Ahlul Bait, enam alat canggih selalu ada di ujung jari Anda.",
+    "subtitle": "Selain hikmah harian dan refleksi pribadi dari Ahlul Bait, delapan alat canggih selalu ada di ujung jari Anda.",
     "ask_tag": "1 Refleksi",
     "ask_title": "Tanya Ayara Apa Saja",
     "ask_text": "Pertanyaan tentang agama Anda. Kesulitan yang membebani hati. Sesuatu yang selalu ingin Anda ketahui dalam Islam. Tanyakan dengan bebas — Ayara menjawab dengan jawaban yang bijaksana dan personal berakar pada tradisi Syiah yang autentik.",
@@ -148,7 +152,19 @@
     "calendar_text": "Lihat setiap waktu shalat untuk setiap hari bulan mendatang sekaligus. Subuh hingga Isya, hari demi hari — semua dihitung untuk lokasi tepat Anda.",
     "calendar_li1": "Tampilan bulan penuh semua 5 waktu shalat",
     "calendar_li2": "Akurat sesuai lokasi dan diperbarui otomatis",
-    "calendar_li3": "Rencanakan seluruh bulan Anda di sekitar shalat"
+    "calendar_li3": "Rencanakan seluruh bulan Anda di sekitar shalat",
+    "islamic_cal_tag": "Wilaya · Baru",
+    "islamic_cal_title": "Kalender Islam",
+    "islamic_cal_text": "Selalu tahu di mana Anda berada dalam tahun Islam yang suci. Kalender Islam Ayara menampilkan kalender Hijriah lengkap beserta bulan-bulan suci, peringatan Syiah, dan tanggal lahir serta syahid semua 14 Maksum — agar tidak ada hari suci yang terlewatkan.",
+    "islamic_cal_li1": "Tanggal Hijriah berdampingan dengan kalender Gregorian",
+    "islamic_cal_li2": "Bulan-bulan suci dan peringatan Syiah ditandai",
+    "islamic_cal_li3": "Tanggal lahir dan syahid 14 Maksum",
+    "duas_tag": "Standar · Termasuk",
+    "duas_title": "Doa & Ziarah",
+    "duas_text": "Akses koleksi kurasi doa dan ziarah autentik dari tradisi Ahlul Bait. Dari Doa Kumayl hingga Ziarah Asyura — kata-kata suci para Maksum, disajikan dengan jelas dalam bahasa Arab beserta terjemahan, untuk setiap kesempatan dan setiap kerinduan hati.",
+    "duas_li1": "Doa autentik dari para Imam (AS) dengan terjemahan",
+    "duas_li2": "Ziarah untuk para Maksum — Asyura, Warits, dan lainnya",
+    "duas_li3": "Untuk kesempatan harian, mingguan, dan musiman"
   },
   "verse2": {
     "text": "\"Kami tidak akan pernah tunduk pada kehinaan. Allah menolak itu untuk kami, Rasul-Nya menolak, dan para mukmin pun menolak.\"",
@@ -172,6 +188,8 @@
     "std_f9": "✗   5 waktu shalat harian",
     "std_f10": "✗   Notifikasi shalat",
     "std_f11": "✗   Kalender shalat bulanan",
+    "std_f13": "✓   Koleksi Doa & Ziarah",
+    "std_f14": "✗   Kalender Islam",
     "std_f12": "✗   300 refleksi Wilaya tambahan",
     "std_btn": "Unduh Ayara",
     "wil_badge": "Paling Dicintai",
@@ -182,6 +200,7 @@
     "wil_f3": "✓   5 waktu shalat harian",
     "wil_f4": "✓   Notifikasi shalat",
     "wil_f5": "✓   Kalender shalat bulanan",
+    "wil_f10": "✓   Kalender Islam",
     "wil_f6": "✓   300 refleksi tambahan",
     "wil_f7": "✓   Beli isi ulang refleksi kapan saja",
     "wil_f8": "✓   Akses awal ke kategori Ahlul Bait baru",

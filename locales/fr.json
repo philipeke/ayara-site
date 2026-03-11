@@ -59,7 +59,11 @@
     "f11_title": "Nahj al-Balagha",
     "f11_text": "Puisez dans l'océan de la sagesse de l'Imam Ali. Ayara tisse les paroles du Nahj al-Balagha dans votre vie quotidienne — les mots les plus éloquents après le Saint Coran.",
     "f12_title": "Croissance spirituelle",
-    "f12_text": "Cultivez des habitudes quotidiennes de réflexion, de dhikr et de proximité avec Allah et les Ahl al-Bayt. Ayara marche avec vous sur le chemin vers la meilleure version de vous-même."
+    "f12_text": "Cultivez des habitudes quotidiennes de réflexion, de dhikr et de proximité avec Allah et les Ahl al-Bayt. Ayara marche avec vous sur le chemin vers la meilleure version de vous-même.",
+    "f13_title": "Calendrier islamique",
+    "f13_text": "Restez aligné avec l'année hégirienne. Consultez les mois sacrés, les commémorations chiites, et les dates de naissance et de martyrdom des 14 Masumeen — pour que chaque jour sacré soit toujours en vue.",
+    "f14_title": "Douas & Ziyarat",
+    "f14_text": "Rapprochez-vous d'Allah et des Masumeen à travers les mots sacrés qu'ils nous ont laissés. Douas et ziyarat authentiques de la tradition des Ahl al-Bayt — pour chaque besoin, chaque occasion et chaque aspiration du cœur."
   },
   "daily": {
     "label": "Ce qui vous attend chaque jour",
@@ -112,7 +116,7 @@
   "spotlight": {
     "label": "Compagnon islamique complet",
     "title": "Plus qu'une réflexion — <em>Complet</em> en tout",
-    "subtitle": "En plus de votre sagesse quotidienne et de vos réflexions personnelles des Ahl al-Bayt, six outils puissants sont toujours à portée de main.",
+    "subtitle": "En plus de votre sagesse quotidienne et de vos réflexions personnelles des Ahl al-Bayt, huit outils puissants sont toujours à portée de main.",
     "ask_tag": "1 réflexion",
     "ask_title": "Demandez à Ayara n'importe quoi",
     "ask_text": "Une question sur votre deen. Une épreuve qui pèse sur votre cœur. Quelque chose que vous avez toujours voulu savoir sur l'islam. Demandez librement — Ayara répond avec une réponse réfléchie et personnalisée ancrée dans la tradition chiite authentique.",
@@ -148,7 +152,19 @@
     "calendar_text": "Consultez tous les horaires de prière pour chaque jour du mois à venir d'un coup d'œil. Du Fajr à l'Isha, jour par jour — tous calculés pour votre emplacement exact.",
     "calendar_li1": "Vue mensuelle complète de tous les 5 horaires de prière",
     "calendar_li2": "Précis selon votre position et mis à jour automatiquement",
-    "calendar_li3": "Planifiez tout votre mois autour de la Salah"
+    "calendar_li3": "Planifiez tout votre mois autour de la Salah",
+    "islamic_cal_tag": "Wilaya · Nouveau",
+    "islamic_cal_title": "Calendrier islamique",
+    "islamic_cal_text": "Sachez toujours où vous en êtes dans la sacrée année islamique. Le Calendrier islamique d'Ayara affiche le calendrier hégérien complet avec les mois sacrés, les commémorations chiites, et les dates de naissance et de martyrdom des 14 Masumeen — pour qu'aucun jour sacré ne soit jamais manqué.",
+    "islamic_cal_li1": "Date hégirienne aux côtés du calendrier grégorien",
+    "islamic_cal_li2": "Mois sacrés et commémorations chiites marqués",
+    "islamic_cal_li3": "Dates de naissance et de martyrdom des 14 Masumeen",
+    "duas_tag": "Standard · Inclus",
+    "duas_title": "Douas & Ziyarat",
+    "duas_text": "Accédez à une collection soigneusement sélectionnée de douas et ziyarat authentiques de la tradition des Ahl al-Bayt. Du Doua Koumayl au Ziyarat Achoura — les mots sacrés des Masumeen, présentés clairement en arabe avec traduction, pour chaque occasion et chaque aspiration du cœur.",
+    "duas_li1": "Douas authentiques des Imams (AS) avec traductions",
+    "duas_li2": "Ziyarat pour les Masumeen — Achoura, Warith et plus",
+    "duas_li3": "Pour les occasions quotidiennes, hebdomadaires et saisonnières"
   },
   "verse2": {
     "text": "\"Jamais nous ne nous soumettrons à l'humiliation. Allah le refuse pour nous, Son Messager le refuse, et les croyants le refusent également.\"",
@@ -172,6 +188,8 @@
     "std_f9": "✗   5 horaires de prière quotidiens",
     "std_f10": "✗   Notifications de prière",
     "std_f11": "✗   Calendrier mensuel de prière",
+    "std_f13": "✓   Collection de douas & ziyarat",
+    "std_f14": "✗   Calendrier islamique",
     "std_f12": "✗   300 réflexions Wilaya supplémentaires",
     "std_btn": "Télécharger Ayara",
     "wil_badge": "Le plus aimé",
@@ -182,6 +200,7 @@
     "wil_f3": "✓   5 horaires de prière quotidiens",
     "wil_f4": "✓   Notifications de prière",
     "wil_f5": "✓   Calendrier mensuel de prière",
+    "wil_f10": "✓   Calendrier islamique",
     "wil_f6": "✓   300 réflexions supplémentaires",
     "wil_f7": "✓   Achetez des recharges de réflexions à tout moment",
     "wil_f8": "✓   Accès anticipé aux nouvelles catégories Ahl al-Bayt",

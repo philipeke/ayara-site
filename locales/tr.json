@@ -59,7 +59,11 @@
     "f11_title": "Nehcü'l-Belağa",
     "f11_text": "İmam Ali'nin hikmet okyanusundan için. Ayara Nehcü'l-Belağa'nın sözlerini günlük hayatınıza işler — Kur'an'dan sonra en beliğ kelam.",
     "f12_title": "Manevi Gelişim",
-    "f12_text": "Tefekkür, zikir ve Allah ile Ehl-i Beyt'e yakınlığın günlük alışkanlıklarını oluşturun. Ayara en iyi halinize giden yolda sizinle birlikte yürür."
+    "f12_text": "Tefekkür, zikir ve Allah ile Ehl-i Beyt'e yakınlığın günlük alışkanlıklarını oluşturun. Ayara en iyi halinize giden yolda sizinle birlikte yürür.",
+    "f13_title": "İslami Takvim",
+    "f13_text": "Hicri yılla uyumlu kalın. Kutsal ayları, Şii anmalarını ve 14 Masumun doğum ve şehadet tarihlerini görün — her kutsal gün her zaman gözünüzün önünde olsun.",
+    "f14_title": "Dualar ve Ziyaretler",
+    "f14_text": "Bizim için bıraktıkları kutsal kelimeler aracılığıyla Allah'a ve Masumlara yaklaşın. Ehl-i Beyt geleneğinden özgün dualar ve ziyaretler — her ihtiyaç, her vesile ve kalbin her özlemi için."
   },
   "daily": {
     "label": "Her Gün Sizi Neler Bekliyor",
@@ -112,7 +116,7 @@
   "spotlight": {
     "label": "Eksiksiz İslami Yoldaş",
     "title": "Tefekkürden Fazlası — Her Yönden <em>Eksiksiz</em>",
-    "subtitle": "Ehl-i Beyt'ten günlük hikmet ve kişisel tefekkürlerinizin yanı sıra, altı güçlü araç her zaman parmaklarınızın ucunda.",
+    "subtitle": "Ehl-i Beyt'ten günlük hikmet ve kişisel tefekkürlerinizin yanı sıra, sekiz güçlü araç her zaman parmaklarınızın ucunda.",
     "ask_tag": "1 Tefekkür",
     "ask_title": "Ayara'ya Her Şeyi Sorun",
     "ask_text": "Dininizle ilgili bir soru. Kalbinizi yoran bir sıkıntı. İslam'da hep merak ettiğiniz bir şey. Özgürce sorun — Ayara özgün Şii geleneğine dayanan düşünceli, kişiselleştirilmiş bir yanıt verir.",
@@ -148,7 +152,19 @@
     "calendar_text": "Gelecek ayın her günü için tüm namaz vakitlerini tek bakışta görün. Sabah'tan Yatsı'ya, gün gün — hepsi tam konumunuz için hesaplanmış.",
     "calendar_li1": "Tüm 5 vakit namaz için tam ay görünümü",
     "calendar_li2": "Konuma göre doğru ve otomatik güncellenir",
-    "calendar_li3": "Tüm ayınızı namaz etrafında planlayın"
+    "calendar_li3": "Tüm ayınızı namaz etrafında planlayın",
+    "islamic_cal_tag": "Vilayet · Yeni",
+    "islamic_cal_title": "İslami Takvim",
+    "islamic_cal_text": "Kutsal İslami yılda nerede olduğunuzu her zaman bilin. Ayara'nın İslami Takvimi, tam Hicri takvimi kutsal aylar, Şii anmaları ve tüm 14 Masumun doğum ve şehadet tarihleriyle birlikte gösterir — hiçbir kutsal gün kaçırılmasın.",
+    "islamic_cal_li1": "Gregoryen takvimin yanında Hicri tarih",
+    "islamic_cal_li2": "Kutsal aylar ve Şii anmaları işaretlenmiş",
+    "islamic_cal_li3": "14 Masumun doğum ve şehadet tarihleri",
+    "duas_tag": "Standart · Dahil",
+    "duas_title": "Dualar ve Ziyaretler",
+    "duas_text": "Ehl-i Beyt geleneğinden özgün dua ve ziyaretlerin özenle seçilmiş koleksiyonuna erişin. Dua Kumeyl'den Ziyaret Aşura'ya — Masumların kutsal kelimeleri, her vesile ve kalbin her özlemi için Arapça ve çevirisiyle açıkça sunulur.",
+    "duas_li1": "İmamların (AS) çevirili özgün duaları",
+    "duas_li2": "Masumlar için ziyaretler — Aşura, Varis ve daha fazlası",
+    "duas_li3": "Günlük, haftalık ve mevsimlik vesileler için"
   },
   "verse2": {
     "text": "\"Bize zillete boyun eğmek asla yakışmaz. Allah bunu bizim için kabul etmez, O'nun Resulü de kabul etmez, müminler de etmez.\"",
@@ -172,6 +188,8 @@
     "std_f9": "✗   5 günlük namaz vakti",
     "std_f10": "✗   Namaz bildirimleri",
     "std_f11": "✗   Aylık namaz takvimi",
+    "std_f13": "✓   Dua ve ziyaret koleksiyonu",
+    "std_f14": "✗   İslami Takvim",
     "std_f12": "✗   300 ek Vilayet tefekkürü",
     "std_btn": "Ayara'yı İndir",
     "wil_badge": "En Sevilen",
@@ -182,6 +200,7 @@
     "wil_f3": "✓   5 günlük namaz vakti",
     "wil_f4": "✓   Namaz bildirimleri",
     "wil_f5": "✓   Aylık namaz takvimi",
+    "wil_f10": "✓   İslami Takvim",
     "wil_f6": "✓   300 ek tefekkür",
     "wil_f7": "✓   İstediğiniz zaman ek tefekkür yüklemesi satın alın",
     "wil_f8": "✓   Yeni Ehl-i Beyt kategorilerine erken erişim",

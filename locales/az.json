@@ -59,7 +59,11 @@
     "f11_title": "Nəhcül-Bəlağə",
     "f11_text": "İmam Əlinin hikmət okyanusundan için. Ayara Nəhcül-Bəlağənin sözlərini gündəlik həyatınıza toxuyur — Qurani-Kərimdən sonra ən məlahətli kəlam.",
     "f12_title": "Mənəvi İnkişaf",
-    "f12_text": "Gündəlik təfəkkür, zikr və Allaha və Əhli-Beyt'ə yaxınlıq vərdişləri qurun. Ayara özünüzün ən yaxşı versiyasına gedən yolda sizinlə birlikdə yürüyür."
+    "f12_text": "Gündəlik təfəkkür, zikr və Allaha və Əhli-Beyt'ə yaxınlıq vərdişləri qurun. Ayara özünüzün ən yaxşı versiyasına gedən yolda sizinlə birlikdə yürüyür.",
+    "f13_title": "İslam Təqvimi",
+    "f13_text": "Hicri ili ilə uyğun qalın. Müqəddəs ayları, Şiə anmalarını və 14 Məsumun doğum və şəhadət tarixlərini görün — hər müqəddəs gün həmişə gözünüzün önündə olsun.",
+    "f14_title": "Dualar və Ziyarətlər",
+    "f14_text": "Bizim üçün buraxdıqları müqəddəs kəlamlar vasitəsilə Allaha və Məsumlara yaxınlaşın. Əhli-Beyt ənənəsindən orijinal dualar və ziyarətlər — hər ehtiyac, hər münasibət və qəlbin hər həsrəti üçün."
   },
   "daily": {
     "label": "Hər Gün Sizi Nələr Gözləyir",
@@ -112,7 +116,7 @@
   "spotlight": {
     "label": "Tam İslam Yoldaşı",
     "title": "Təfəkkürdən Artıq — Hər Cəhətdən <em>Tam</em>",
-    "subtitle": "Əhli-Beyt'dən gündəlik hikmət və şəxsi təfəkkürlərinizdən əlavə, altı güclü alət həmişə barmaqlarınızın ucundadır.",
+    "subtitle": "Əhli-Beyt'dən gündəlik hikmət və şəxsi təfəkkürlərinizdən əlavə, səkkiz güclü alət həmişə barmaqlarınızın ucundadır.",
     "ask_tag": "1 Təfəkkür",
     "ask_title": "Ayara'dan Hər Şey Soruşun",
     "ask_text": "Dininiz haqqında sual. Ürəyinizi ağırlayan sıxıntı. İslamda həmişə bilmək istədiyiniz bir şey. Sərbəstcə soruşun — Ayara orijinal Şiə ənənəsinə əsaslanan düşüncəli, fərdiləşdirilmiş cavab verir.",
@@ -148,7 +152,19 @@
     "calendar_text": "Gələn ayın hər günü üçün bütün namaz vaxtlarını bir baxışda görün. Sübhdən İşaya qədər, gün-gün — hamısı dəqiq mövqeyiniz üçün hesablanmış.",
     "calendar_li1": "Bütün 5 namaz vaxtı üçün tam aylıq görünüş",
     "calendar_li2": "Mövqeyə görə dəqiq və avtomatik yenilənir",
-    "calendar_li3": "Bütün ayınızı namaz ətrafında planlaşdırın"
+    "calendar_li3": "Bütün ayınızı namaz ətrafında planlaşdırın",
+    "islamic_cal_tag": "Vilayət · Yeni",
+    "islamic_cal_title": "İslam Təqvimi",
+    "islamic_cal_text": "Müqəddəs İslam ilində harada olduğunuzu həmişə bilin. Ayara'nın İslam Təqvimi tam Hicri təqvimi müqəddəs aylar, Şiə anmaları və bütün 14 Məsumun doğum və şəhadət tarixləri ilə birlikdə göstərir — heç bir müqəddəs gün qaçırılmasın.",
+    "islamic_cal_li1": "Miladi təqvimin yanında Hicri tarix",
+    "islamic_cal_li2": "Müqəddəs aylar və Şiə anmaları qeyd edilmiş",
+    "islamic_cal_li3": "14 Məsumun doğum və şəhadət tarixləri",
+    "duas_tag": "Standart · Daxildir",
+    "duas_title": "Dualar və Ziyarətlər",
+    "duas_text": "Əhli-Beyt ənənəsindən orijinal dua və ziyarətlərin seçilmiş kolleksiyasına daxil olun. Dua Kumeyl'dən Ziyarət Aşuraya qədər — Məsumların müqəddəs kəlamları, hər münasibət və qəlbin hər həsrəti üçün Ərəbcə və tərcümə ilə aydın şəkildə təqdim edilir.",
+    "duas_li1": "İmamların (ə.s.) tərcümə ilə orijinal duaları",
+    "duas_li2": "Məsumlar üçün ziyarətlər — Aşura, Varis və daha çox",
+    "duas_li3": "Gündəlik, həftəlik və mövsümlük münasibətlər üçün"
   },
   "verse2": {
     "text": "\"Biz heç vaxt zillətə boyun əyməyəcəyik. Allah bunu bizim üçün qəbul etmir, Rəsulullah qəbul etmir, möminlər də qəbul etmir.\"",
@@ -172,6 +188,8 @@
     "std_f9": "✗   5 gündəlik namaz vaxtı",
     "std_f10": "✗   Namaz bildirişləri",
     "std_f11": "✗   Aylıq namaz təqvimi",
+    "std_f13": "✓   Dua və ziyarət kolleksiyası",
+    "std_f14": "✗   İslam Təqvimi",
     "std_f12": "✗   300 əlavə Vilayət Təfəkkürü",
     "std_btn": "Ayara'nı Yüklə",
     "wil_badge": "Ən Sevilən",
@@ -182,6 +200,7 @@
     "wil_f3": "✓   5 gündəlik namaz vaxtı",
     "wil_f4": "✓   Namaz bildirişləri",
     "wil_f5": "✓   Aylıq namaz təqvimi",
+    "wil_f10": "✓   İslam Təqvimi",
     "wil_f6": "✓   300 əlavə təfəkkür",
     "wil_f7": "✓   İstənilən vaxt əlavə təfəkkür alın",
     "wil_f8": "✓   Yeni Əhli-Beyt kateqoriyalarına erkən giriş",

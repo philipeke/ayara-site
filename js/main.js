@@ -34,7 +34,8 @@ function get(obj, path) {
   const canvas = document.getElementById('starCanvas');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
-  let W, H, stars = [], animId;
+  let W, H, stars = [], animId, lastFrame = 0;
+  const FPS = 24, INTERVAL = 1000 / FPS;
 
   function resize() {
     W = canvas.width  = window.innerWidth;
@@ -42,42 +43,48 @@ function get(obj, path) {
   }
 
   function mkStar() {
+    const colored = Math.random() > 0.88;
     return {
       x: Math.random() * W,
       y: Math.random() * H,
-      r: Math.random() * 1.2 + 0.3,
-      alpha: Math.random() * 0.6 + 0.2,
-      speed: Math.random() * 0.012 + 0.004,
+      r: Math.random() * 1.1 + 0.3,
+      alpha: Math.random() * 0.55 + 0.2,
+      speed: Math.random() * 0.008 + 0.003,
       phase: Math.random() * Math.PI * 2,
-      // colour: mix between white and faint crimson/gold
-      hue: Math.random() > 0.85 ? (Math.random() > 0.5 ? 340 : 42) : 0,
-      sat: Math.random() > 0.85 ? 60 : 0,
+      style: colored
+        ? `hsla(${Math.random() > 0.5 ? 340 : 42},55%,75%,`
+        : 'rgba(255,255,255,',
     };
   }
 
   function populate() {
-    const count = Math.min(220, Math.floor((W * H) / 5200));
+    const count = Math.min(120, Math.floor((W * H) / 9000));
     stars = Array.from({ length: count }, mkStar);
   }
 
-  function draw() {
+  function draw(ts) {
+    animId = requestAnimationFrame(draw);
+    if (ts - lastFrame < INTERVAL) return;
+    lastFrame = ts;
     ctx.clearRect(0, 0, W, H);
-    const t = performance.now() * 0.001;
+    const t = ts * 0.001;
     for (const s of stars) {
       const a = s.alpha * (0.5 + 0.5 * Math.sin(t * s.speed * 60 + s.phase));
       ctx.beginPath();
       ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-      ctx.fillStyle = s.sat
-        ? `hsla(${s.hue},${s.sat}%,75%,${a})`
-        : `rgba(255,255,255,${a})`;
+      ctx.fillStyle = s.style + a + ')';
       ctx.fill();
     }
-    animId = requestAnimationFrame(draw);
   }
 
   resize();
   populate();
-  draw();
+  animId = requestAnimationFrame(draw);
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) { cancelAnimationFrame(animId); animId = null; }
+    else { animId = requestAnimationFrame(draw); }
+  });
 
   const ro = new ResizeObserver(() => { resize(); populate(); });
   ro.observe(document.body);

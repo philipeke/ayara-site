@@ -59,7 +59,11 @@
     "f11_title": "Nahj al-Balagha",
     "f11_text": "Draw from the ocean of Imam Ali's wisdom. Ayara weaves the sayings of Nahj al-Balagha into your daily life — the most eloquent words after the Holy Quran.",
     "f12_title": "Spiritual Growth",
-    "f12_text": "Build daily habits of reflection, dhikr, and closeness to Allah and the Ahl al-Bayt. Ayara walks with you on the path toward becoming the best version of yourself."
+    "f12_text": "Build daily habits of reflection, dhikr, and closeness to Allah and the Ahl al-Bayt. Ayara walks with you on the path toward becoming the best version of yourself.",
+    "f13_title": "Islamic Calendar",
+    "f13_text": "Stay aligned with the Hijri year. See holy months, Shia commemorations, and the birthdays and martyrdom dates of the 14 Masumeen — so every sacred day is always within sight.",
+    "f14_title": "Duas & Ziyarat",
+    "f14_text": "Draw closer to Allah and the Masumeen through the sacred words they left for us. Authentic duas and ziyarat from the Ahl al-Bayt tradition — for every need, every occasion, and every longing of the heart."
   },
   "daily": {
     "label": "What Awaits You Each Day",
@@ -112,7 +116,7 @@
   "spotlight": {
     "label": "Complete Islamic Companion",
     "title": "More Than Reflection — <em>Complete</em> in Every Way",
-    "subtitle": "Alongside your daily wisdom and personal reflections from the Ahl al-Bayt, six powerful tools are always at your fingertips.",
+    "subtitle": "Alongside your daily wisdom and personal reflections from the Ahl al-Bayt, eight powerful tools are always at your fingertips.",
     "ask_tag": "1 Reflection",
     "ask_title": "Ask Ayara Anything",
     "ask_text": "A question about your deen. A hardship weighing on your heart. Something you've always wondered about in Islam. Ask it freely — Ayara responds with a thoughtful, personalised answer rooted in the authentic Shia tradition. One reflection spent, one answer received, crafted directly for you.",
@@ -148,7 +152,19 @@
     "calendar_text": "See every prayer time for every day of the coming month at a glance. Fajr to Isha, day by day — all calculated for your exact location. Plan your schedule, prepare for travel, or simply stay aware of how each day unfolds in the light of prayer.",
     "calendar_li1": "Full month view of all 5 daily prayer times",
     "calendar_li2": "Location-accurate and updated automatically",
-    "calendar_li3": "Plan your entire month around Salah"
+    "calendar_li3": "Plan your entire month around Salah",
+    "islamic_cal_tag": "Wilaya · New",
+    "islamic_cal_title": "Islamic Calendar",
+    "islamic_cal_text": "Always know where you stand in the sacred Islamic year. Ayara's Islamic Calendar displays the full Hijri calendar alongside holy months, Shia commemorations, and the birthdays and martyrdom dates of all 14 Masumeen — so no sacred day is ever missed.",
+    "islamic_cal_li1": "Hijri date alongside the Gregorian calendar",
+    "islamic_cal_li2": "Holy months and Shia commemorations marked",
+    "islamic_cal_li3": "Birthdays and martyrdom dates of the 14 Masumeen",
+    "duas_tag": "Standard · Included",
+    "duas_title": "Duas & Ziyarat",
+    "duas_text": "Access a curated collection of authentic duas and ziyarat from the Ahl al-Bayt tradition. From Dua Kumayl to Ziyarat Ashura — the sacred words of the Masumeen, presented clearly in Arabic with translation, for every occasion and every longing of the heart.",
+    "duas_li1": "Authentic duas from the Imams (AS) with translations",
+    "duas_li2": "Ziyarat for the Masumeen — Ashura, Warith, and more",
+    "duas_li3": "For daily, weekly, and seasonal occasions"
   },
   "verse2": {
     "text": "\"Never shall we submit to humiliation. Allah refuses it for us, His Messenger refuses it, and so do the believers.\"",
@@ -172,6 +188,8 @@
     "std_f9": "✗   5 daily prayer times",
     "std_f10": "✗   Prayer notifications",
     "std_f11": "✗   Monthly prayer calendar",
+    "std_f13": "✓   Duas & Ziyarat collection",
+    "std_f14": "✗   Islamic Calendar",
     "std_f12": "✗   300 additional Wilaya reflections",
     "std_btn": "Download Ayara",
     "wil_badge": "Most Beloved",
@@ -182,6 +200,7 @@
     "wil_f3": "✓   5 daily prayer times",
     "wil_f4": "✓   Prayer notifications",
     "wil_f5": "✓   Monthly prayer calendar",
+    "wil_f10": "✓   Islamic Calendar",
     "wil_f6": "✓   300 additional reflections",
     "wil_f7": "✓   Buy reflection top-ups anytime",
     "wil_f8": "✓   Early access to new Ahl al-Bayt categories",

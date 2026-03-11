@@ -305,13 +305,30 @@
         <span class="nav__logo-name">Ayara</span>
       </a>
       <div class="nav__links" id="navLinks">
-        <a href="/#about"      class="nav__link">About</a>
-        <a href="/#categories" class="nav__link">Categories</a>
-        <a href="/#pricing"    class="nav__link">Plans</a>
-        <a href="/support"     class="nav__link nav__link--active">Support</a>
+        <a href="/#about"      class="nav__link" data-i18n="nav.about">About</a>
+        <a href="/#categories" class="nav__link" data-i18n="nav.categories">Categories</a>
+        <a href="/#pricing"    class="nav__link" data-i18n="nav.plans">Plans</a>
+        <a href="/support"     class="nav__link nav__link--active" data-i18n="nav.support">Support</a>
       </div>
       <div class="nav__right">
-        <a href="/#download" class="btn btn--crimson nav__cta">Download</a>
+        <div class="nav__lang" id="langSwitcher">
+          <button class="nav__lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
+            <span class="lang-flag" id="langFlag">🇬🇧</span>
+            <span class="lang-code" id="langCode">EN</span>
+            <span class="lang-chevron" aria-hidden="true">▾</span>
+          </button>
+          <div class="nav__lang-dropdown" id="langDropdown" role="listbox" aria-label="Select language">
+            <button class="nav__lang-option" data-lang="en" role="option"><span class="opt-flag">🇬🇧</span><span class="opt-name">English</span></button>
+            <button class="nav__lang-option" data-lang="ar" role="option"><span class="opt-flag">🇸🇦</span><span class="opt-name">العربية</span></button>
+            <button class="nav__lang-option" data-lang="fa" role="option"><span class="opt-flag">🇮🇷</span><span class="opt-name">فارسی</span></button>
+            <button class="nav__lang-option" data-lang="ur" role="option"><span class="opt-flag">🇵🇰</span><span class="opt-name">اردو</span></button>
+            <button class="nav__lang-option" data-lang="tr" role="option"><span class="opt-flag">🇹🇷</span><span class="opt-name">Türkçe</span></button>
+            <button class="nav__lang-option" data-lang="id" role="option"><span class="opt-flag">🇮🇩</span><span class="opt-name">Indonesia</span></button>
+            <button class="nav__lang-option" data-lang="fr" role="option"><span class="opt-flag">🇫🇷</span><span class="opt-name">Français</span></button>
+            <button class="nav__lang-option" data-lang="az" role="option"><span class="opt-flag">🇦🇿</span><span class="opt-name">Azərbaycanca</span></button>
+          </div>
+        </div>
+        <a href="/#download" class="btn btn--crimson nav__cta" data-i18n="nav.download">Download</a>
         <button class="nav__hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -324,9 +341,9 @@
   ============================================================ -->
   <header class="page-hero support-hero" role="banner">
     <div class="page-hero__inner">
-      <div class="page-hero__badge">Support Center</div>
-      <h1 class="page-hero__title">How Can We Help You?</h1>
-      <p class="page-hero__subtitle">
+      <div class="page-hero__badge" data-i18n="support.hero_badge">Support Center</div>
+      <h1 class="page-hero__title" data-i18n="support.hero_title">How Can We Help You?</h1>
+      <p class="page-hero__subtitle" data-i18n="support.hero_subtitle">
         We are a small team and we care deeply about every person who uses Ayara. Find answers below, or reach us directly — we read every message.
       </p>
       <div class="page-hero__meta">
@@ -344,46 +361,46 @@
     <div class="container">
       <div class="about-grid">
         <div class="about-content animate-on-scroll">
-          <div class="about-eyebrow">The Team Behind Ayara</div>
-          <h2 class="about-title">Built with Care by <em>OakDev &amp; AI AB</em></h2>
+          <div class="about-eyebrow" data-i18n="support.about_eyebrow">The Team Behind Ayara</div>
+          <h2 class="about-title" data-i18n-html="support.about_title_html">Built with Care by <em>OakDev &amp; AI AB</em></h2>
           <div class="about-body">
-            <p>
-              Ayara is built with care by OakDev &amp; AI AB, a small software company based in Uddevalla, Sweden. We are a team of developers and designers with a deep interest in faith and spirituality — and Ayara was founded to honour our dear Muslim friends in the studio, whose love for Islam and the Ahl al-Bayt inspired everything you see here.
+            <p data-i18n="support.about_p1">
+              Ayara is built with care by OakDev &amp; AI AB, a small software company based in Uddevalla, Sweden. We are a team of developers and designers with a genuine passion for theology and the history of religion — and that curiosity is what drives everything we build.
             </p>
-            <p>
-              Our mission is to create thoughtful, beautiful digital tools that serve the Muslim community with sincerity and respect. Every feature, every word, and every design decision is made with your spiritual journey in mind.
+            <p data-i18n="support.about_p2">
+              Our journey into Islamic apps began with a dear friend in the studio — a Sunni Muslim whose faith and love for Islam inspired us to build Nuria first. But we wanted to honour Islam in its full breadth, and so we built Ayara — a home for the Shia tradition, rooted in the wisdom of the Ahl al-Bayt (peace be upon them).
             </p>
-            <p>
-              We are committed to the Shia Muslim community — to honouring the legacy of the Ahl al-Bayt (peace be upon them) and making their timeless wisdom accessible, beautiful, and personal for every believer, wherever they are in the world.
+            <p data-i18n="support.about_p3">
+              We are not Muslims ourselves, but we approach this work with deep respect, sincere study, and a commitment to getting it right. Every feature, every word, and every design decision is made with your spiritual journey in mind — and we are grateful for the trust the community places in us.
             </p>
           </div>
           <div class="about-badge-wrap">
-            <div class="about-badge"><span class="about-badge__icon">🇸🇪</span> Based in Sweden</div>
-            <div class="about-badge"><span class="about-badge__icon">🤍</span> Faith-first design</div>
-            <div class="about-badge"><span class="about-badge__icon">🔒</span> Privacy by default</div>
-            <div class="about-badge"><span class="about-badge__icon">🌍</span> 8 languages</div>
+            <div class="about-badge"><span class="about-badge__icon">🇸🇪</span> <span data-i18n="support.badge_sweden">Based in Sweden</span></div>
+            <div class="about-badge"><span class="about-badge__icon">🤍</span> <span data-i18n="support.badge_faith">Faith-first design</span></div>
+            <div class="about-badge"><span class="about-badge__icon">🔒</span> <span data-i18n="support.badge_privacy">Privacy by default</span></div>
+            <div class="about-badge"><span class="about-badge__icon">🌍</span> <span data-i18n="support.badge_lang">8 languages</span></div>
           </div>
         </div>
         <div class="about-visual animate-on-scroll" data-delay="150">
           <div class="about-stat-card">
             <div class="about-stat-icon">📿</div>
             <div>
-              <div class="about-stat-label">What We Built</div>
-              <div class="about-stat-value">15 Spiritual Categories · 150 Reflections</div>
+              <div class="about-stat-label" data-i18n="support.stat_built_label">What We Built</div>
+              <div class="about-stat-value" data-i18n="support.stat_built_value">15 Spiritual Categories · 150 Reflections</div>
             </div>
           </div>
           <div class="about-stat-card about-stat-card--gold">
             <div class="about-stat-icon">✨</div>
             <div>
-              <div class="about-stat-label">Our Focus</div>
-              <div class="about-stat-value">Wisdom of the Ahl al-Bayt (AS)</div>
+              <div class="about-stat-label" data-i18n="support.stat_focus_label">Our Focus</div>
+              <div class="about-stat-value" data-i18n="support.stat_focus_value">Wisdom of the Ahl al-Bayt (AS)</div>
             </div>
           </div>
           <div class="about-stat-card about-stat-card--green">
             <div class="about-stat-icon">🌐</div>
             <div>
-              <div class="about-stat-label">Global Reach</div>
-              <div class="about-stat-value">English, Arabic, Persian, Urdu + 4 more</div>
+              <div class="about-stat-label" data-i18n="support.stat_reach_label">Global Reach</div>
+              <div class="about-stat-value" data-i18n="support.stat_reach_value">English, Arabic, Persian, Urdu + 4 more</div>
             </div>
           </div>
           <div class="about-stat-card">
@@ -403,9 +420,9 @@
   ============================================================ -->
   <section class="faq-section" id="faq">
     <div class="container">
-      <div class="section__label">Frequently Asked Questions</div>
-      <h2 class="section__title">Quick <em>Answers</em></h2>
-      <p class="section__subtitle" style="text-align:center; max-width: 600px; margin: 0 auto;">
+      <div class="section__label" data-i18n="support.faq_label">Frequently Asked Questions</div>
+      <h2 class="section__title" data-i18n-html="support.faq_title_html">Quick <em>Answers</em></h2>
+      <p class="section__subtitle" style="text-align:center; max-width: 600px; margin: 0 auto;" data-i18n="support.faq_subtitle">
         Everything you need to know about Ayara, reflections, and how we work. Can't find your answer? Send us a message below.
       </p>
 
@@ -427,7 +444,7 @@
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </summary>
           <div class="faq-a">
-            The Wilaya plan is Ayara's premium offering. It unlocks the full app experience: Live Qibla compass, 5 daily prayer times, prayer notifications, monthly prayer calendar, 300 additional reflections, and the ability to top up reflections anytime. Purchase it from within the app through the App Store or Google Play.
+            The Wilaya plan is Ayara's premium offering — a one-time in-app purchase (not a subscription). It permanently unlocks the full app experience: Live Qibla compass, 5 daily prayer times, prayer notifications, monthly prayer calendar, and 300 additional reflections. You pay once, and it's yours forever. Top-up reflection bundles are also available as separate one-time purchases whenever you need more.
           </div>
         </details>
 
@@ -463,11 +480,11 @@
 
         <details class="faq-item">
           <summary class="faq-q">
-            How do I cancel my Wilaya subscription?
+            Does the Wilaya plan renew automatically?
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </summary>
           <div class="faq-a">
-            Subscriptions are managed through the App Store or Google Play. On iPhone: go to Settings → [Your Name] → Subscriptions → Ayara. On Android: open Google Play → tap your profile → Payments &amp; Subscriptions → Subscriptions → Ayara. Cancel at least 24 hours before your renewal date to avoid being charged.
+            No. The Wilaya plan is a one-time purchase — there are no recurring charges and nothing to cancel. You pay once and it's yours permanently. The same applies to reflection top-ups: each is a single, non-recurring charge.
           </div>
         </details>
 
@@ -477,7 +494,7 @@
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </summary>
           <div class="faq-a">
-            Refunds are handled by Apple or Google, not directly by OakDev. For App Store purchases, visit <em>reportaproblem.apple.com</em>. For Google Play, visit your Play Store account → Payments &amp; Subscriptions. If you experienced a technical error that prevented you from accessing content, contact us and we will do our best to make it right.
+            Refunds are handled by Apple or Google, not directly by OakDev. For App Store purchases, visit <em>reportaproblem.apple.com</em>. For Google Play, visit your Play Store account → Payments &amp; Subscriptions → Order History. If you experienced a technical error that prevented you from accessing content you paid for, contact us at hello@oakdev.app and we will do our best to make it right.
           </div>
         </details>
 
@@ -487,7 +504,7 @@
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </summary>
           <div class="faq-a">
-            You can delete your account at any time from within the Ayara app, or by following the instructions at <a href="/delete-account">ayara.app/delete-account</a>. All your personal data will be removed within 30 days. Please note that account deletion does not automatically cancel a Wilaya subscription — you must cancel that separately through the App Store or Google Play.
+            You can delete your account at any time from within the Ayara app, or by following the instructions at <a href="/delete-account">ayara.app/delete-account</a>. All your personal data will be removed within 30 days. Since all Ayara purchases are one-time (no subscriptions), there is nothing to cancel when you delete your account.
           </div>
         </details>
 
@@ -540,8 +557,8 @@
   ============================================================ -->
   <section class="contact-section" id="contact">
     <div class="container">
-      <div class="section__label">Get In Touch</div>
-      <h2 class="section__title">Send Us a <em>Message</em></h2>
+      <div class="section__label" data-i18n="support.contact_label">Get In Touch</div>
+      <h2 class="section__title" data-i18n-html="support.contact_title_html">Send Us a <em>Message</em></h2>
 
       <div class="contact-grid">
 
@@ -659,89 +676,53 @@
   <!-- ============================================================
        FOOTER
   ============================================================ -->
-  <footer class="footer">
-    <div class="footer__inner">
-      <div class="footer__brand">
-        <img src="../assets/icon.png" alt="Ayara" class="footer__logo" />
-        <span class="footer__brand-name">Ayara</span>
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <img src="../assets/icon.png" alt="Ayara" class="footer__logo" />
+          <p class="footer__tagline" data-i18n="footer.tagline">Wisdom of the Ahl al-Bayt — every single day.</p>
+          <p class="footer__arabic" lang="ar">يَا أَهْلَ الْبَيْتِ</p>
+        </div>
+        <nav class="footer__links" aria-label="Footer navigation">
+          <div class="footer__col">
+            <span class="footer__col-title" data-i18n="footer.col1">App</span>
+            <a href="/#about"      data-i18n="footer.about">About Ayara</a>
+            <a href="/#categories" data-i18n="nav.categories">Categories</a>
+            <a href="/#pricing"    data-i18n="footer.plans">Plans</a>
+            <a href="/#download"   data-i18n="footer.dl">Download</a>
+          </div>
+          <div class="footer__col">
+            <span class="footer__col-title" data-i18n="footer.col2">Legal</span>
+            <a href="/privacy"        data-i18n="footer.privacy">Privacy Policy</a>
+            <a href="/terms"          data-i18n="footer.terms">Terms of Service</a>
+            <a href="/delete-account" data-i18n="footer.delete">Delete Account</a>
+          </div>
+          <div class="footer__col">
+            <span class="footer__col-title" data-i18n="footer.col3">Help</span>
+            <a href="/support"         data-i18n="footer.support_center">Support Center</a>
+            <a href="/support#contact" data-i18n="footer.contact">Contact Us</a>
+            <a href="mailto:hello@oakdev.app" class="footer__email">hello@oakdev.app</a>
+          </div>
+        </nav>
       </div>
-      <nav class="footer__links" aria-label="Footer navigation">
-        <a href="/support"        class="footer__link footer__link--active">Support</a>
-        <a href="/privacy"        class="footer__link">Privacy Policy</a>
-        <a href="/terms"          class="footer__link">Terms of Service</a>
-        <a href="/delete-account" class="footer__link">Delete Account</a>
-      </nav>
-      <p class="footer__copy">
-        &copy; 2026 OakDev &amp; AI AB. All rights reserved.<br />
-        <a href="mailto:hello@oakdev.app" class="footer__email">hello@oakdev.app</a>
-      </p>
+      <div class="footer__bottom">
+        <p>© 2026 OakDev &amp; AI AB. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="/privacy"        data-i18n="footer.privacy">Privacy</a>
+          <a href="/terms"          data-i18n="footer.terms">Terms</a>
+          <a href="/support"        data-i18n="footer.support_center">Support</a>
+          <a href="/delete-account" data-i18n="footer.delete">Delete Account</a>
+        </div>
+      </div>
     </div>
   </footer>
 
   <!-- ============================================================
        SCRIPTS
   ============================================================ -->
+  <script src="../js/i18n.js"></script>
   <script>
-    // ── Stars ──────────────────────────────────────────────────
-    (function() {
-      const canvas = document.getElementById('starCanvas');
-      const ctx    = canvas.getContext('2d');
-      let stars    = [];
-
-      function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
-
-      function init() {
-        resize();
-        stars = [];
-        const count = Math.floor((canvas.width * canvas.height) / 9000);
-        const palette = ['255,255,255','194,59,90','201,168,76'];
-        for (let i = 0; i < count; i++) {
-          stars.push({ x: Math.random()*canvas.width, y: Math.random()*canvas.height, r: Math.random()*1.4+0.2, a: Math.random(), speed: Math.random()*0.004+0.001, col: palette[Math.floor(Math.random()*palette.length)] });
-        }
-      }
-
-      function draw() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        stars.forEach(s => {
-          s.a += s.speed;
-          ctx.beginPath();
-          ctx.arc(s.x, s.y, s.r, 0, Math.PI*2);
-          ctx.fillStyle = `rgba(${s.col},${Math.abs(Math.sin(s.a))})`;
-          ctx.fill();
-        });
-        requestAnimationFrame(draw);
-      }
-
-      window.addEventListener('resize', init);
-      init(); draw();
-    })();
-
-    // ── Nav hamburger ──────────────────────────────────────────
-    (function() {
-      const hamburger = document.getElementById('hamburger');
-      const navLinks  = document.getElementById('navLinks');
-      hamburger.addEventListener('click', function() {
-        const open = navLinks.classList.toggle('nav__links--open');
-        hamburger.setAttribute('aria-expanded', open);
-        document.body.style.overflow = open ? 'hidden' : '';
-      });
-    })();
-
-    // ── Scroll animations ──────────────────────────────────────
-    (function() {
-      const els = document.querySelectorAll('.animate-on-scroll');
-      const obs = new IntersectionObserver(entries => {
-        entries.forEach(e => {
-          if (e.isIntersecting) {
-            const delay = e.target.dataset.delay || 0;
-            setTimeout(() => e.target.classList.add('visible'), parseInt(delay));
-            obs.unobserve(e.target);
-          }
-        });
-      }, { threshold: 0.1 });
-      els.forEach(el => obs.observe(el));
-    })();
-
     // ── FAQ accordion open class ───────────────────────────────
     (function() {
       document.querySelectorAll('.faq-item').forEach(item => {

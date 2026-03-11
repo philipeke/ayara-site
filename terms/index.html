@@ -42,13 +42,30 @@
         <span class="nav__logo-name">Ayara</span>
       </a>
       <div class="nav__links" id="navLinks">
-        <a href="/#about"      class="nav__link">About</a>
-        <a href="/#categories" class="nav__link">Categories</a>
-        <a href="/#pricing"    class="nav__link">Plans</a>
-        <a href="/support"     class="nav__link">Support</a>
+        <a href="/#about"      class="nav__link" data-i18n="nav.about">About</a>
+        <a href="/#categories" class="nav__link" data-i18n="nav.categories">Categories</a>
+        <a href="/#pricing"    class="nav__link" data-i18n="nav.plans">Plans</a>
+        <a href="/support"     class="nav__link" data-i18n="nav.support">Support</a>
       </div>
       <div class="nav__right">
-        <a href="/#download" class="btn btn--crimson nav__cta">Download</a>
+        <div class="nav__lang" id="langSwitcher">
+          <button class="nav__lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
+            <span class="lang-flag" id="langFlag">🇬🇧</span>
+            <span class="lang-code" id="langCode">EN</span>
+            <span class="lang-chevron" aria-hidden="true">▾</span>
+          </button>
+          <div class="nav__lang-dropdown" id="langDropdown" role="listbox" aria-label="Select language">
+            <button class="nav__lang-option" data-lang="en" role="option"><span class="opt-flag">🇬🇧</span><span class="opt-name">English</span></button>
+            <button class="nav__lang-option" data-lang="ar" role="option"><span class="opt-flag">🇸🇦</span><span class="opt-name">العربية</span></button>
+            <button class="nav__lang-option" data-lang="fa" role="option"><span class="opt-flag">🇮🇷</span><span class="opt-name">فارسی</span></button>
+            <button class="nav__lang-option" data-lang="ur" role="option"><span class="opt-flag">🇵🇰</span><span class="opt-name">اردو</span></button>
+            <button class="nav__lang-option" data-lang="tr" role="option"><span class="opt-flag">🇹🇷</span><span class="opt-name">Türkçe</span></button>
+            <button class="nav__lang-option" data-lang="id" role="option"><span class="opt-flag">🇮🇩</span><span class="opt-name">Indonesia</span></button>
+            <button class="nav__lang-option" data-lang="fr" role="option"><span class="opt-flag">🇫🇷</span><span class="opt-name">Français</span></button>
+            <button class="nav__lang-option" data-lang="az" role="option"><span class="opt-flag">🇦🇿</span><span class="opt-name">Azərbaycanca</span></button>
+          </div>
+        </div>
+        <a href="/#download" class="btn btn--crimson nav__cta" data-i18n="nav.download">Download</a>
         <button class="nav__hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -81,7 +98,7 @@
     <div class="key-points">
       <h2 class="key-points__title">What You Need to Know</h2>
       <ul class="key-points__list">
-        <li><strong>Ayara is a paid app.</strong> You receive 150 reflections when you first download the app. Additional reflections are available through the Barakah plan or top-ups.</li>
+        <li><strong>Ayara is a paid app.</strong> You receive 150 reflections when you first download the app. Additional reflections are available through the Wilaya one-time purchase or top-ups.</li>
         <li><strong>Reflections are the in-app currency.</strong> Spend them to unlock wisdoms from 15 categories or to ask Ayara Anything. They are non-refundable once used.</li>
         <li><strong>AI-generated content is guidance, not religious authority.</strong> Always consult qualified scholars for binding religious rulings.</li>
         <li><strong>You must be 17 or older</strong> (or the minimum age in your country) to use Ayara.</li>
@@ -107,7 +124,7 @@
           <li><a href="#accounts"        class="legal-toc__link">Account Registration</a></li>
           <li><a href="#reflections"     class="legal-toc__link">Reflections System</a></li>
           <li><a href="#ai-features"     class="legal-toc__link">AI-Powered Features</a></li>
-          <li><a href="#payments"        class="legal-toc__link">Subscriptions &amp; Payments</a></li>
+          <li><a href="#payments"        class="legal-toc__link">Purchases &amp; Payments</a></li>
           <li><a href="#refunds"         class="legal-toc__link">Refund Policy</a></li>
           <li><a href="#ip"              class="legal-toc__link">Intellectual Property</a></li>
           <li><a href="#user-content"    class="legal-toc__link">User Content</a></li>
@@ -225,8 +242,8 @@
         <h3>Acquiring Additional Reflections</h3>
         <p>Additional reflections can be acquired through:</p>
         <ul>
-          <li><strong>Barakah Plan:</strong> A subscription that provides a monthly allotment of reflections in addition to other benefits.</li>
-          <li><strong>Top-Ups:</strong> One-time in-app purchases of reflection bundles.</li>
+          <li><strong>Wilaya Plan:</strong> A one-time in-app purchase that permanently unlocks premium features and adds 300 reflections to your account.</li>
+          <li><strong>Top-Ups:</strong> One-time in-app purchases of additional reflection bundles, available at any time.</li>
         </ul>
         <p>Purchased reflections are subject to the payment terms in Section 7.</p>
 
@@ -235,7 +252,7 @@
         </div>
 
         <h3>Expiration</h3>
-        <p>Reflections that are purchased through a subscription (Barakah Plan) that you cancel do not roll over indefinitely — any unused subscription-cycle reflections expire at the end of the subscription period in which they were granted, unless otherwise stated in the subscription terms presented at purchase. Top-up reflections do not expire while your account remains active.</p>
+        <p>Reflections from the Wilaya purchase and top-ups do not expire while your account remains active.</p>
       </section>
 
       <!-- 06 — AI Features -->
@@ -272,22 +289,22 @@
       <!-- 07 — Payments -->
       <section class="legal-section" id="payments">
         <div class="legal-section__badge">07</div>
-        <h2 class="legal-section__title">Subscriptions &amp; Payments</h2>
+        <h2 class="legal-section__title">Purchases &amp; Payments</h2>
 
-        <h3>Barakah Plan</h3>
-        <p>The Barakah Plan is a recurring subscription that provides enhanced access to reflections and features. Subscription details — including price, billing interval, and reflection allotment — are displayed clearly in the app before purchase. By subscribing, you authorize OakDev (through the App Store or Play Store) to charge the applicable subscription fee at the beginning of each billing period.</p>
+        <h3>App Purchase</h3>
+        <p>Ayara is a paid app. You purchase the app once through the Apple App Store or Google Play Store. Your purchase includes 150 reflections and access to the Standard feature set. There are no recurring charges or automatic renewals associated with the app purchase itself.</p>
 
-        <h3>Billing and Renewal</h3>
-        <p>All purchases are processed through your Apple App Store or Google Play Store account. Subscriptions automatically renew at the end of each billing period unless you cancel at least 24 hours before the renewal date. You can manage and cancel your subscription through your device's App Store or Play Store account settings.</p>
+        <h3>Wilaya Plan</h3>
+        <p>The Wilaya Plan is a one-time in-app purchase that permanently unlocks the full Ayara experience — including the live Qibla compass, daily prayer times, prayer notifications, monthly prayer calendar, and 300 additional reflections. Purchase details and pricing are displayed clearly in the app before you confirm. This is a single charge; it does not renew automatically.</p>
 
-        <h3>Price Changes</h3>
-        <p>We reserve the right to change subscription prices. We will notify you of any price change before it takes effect and give you the opportunity to cancel before being charged the new price. Your continued use of the subscription after the effective date of a price change constitutes your acceptance of the new price.</p>
+        <h3>Reflection Top-Ups</h3>
+        <p>Once your reflections run low, you may purchase additional reflection bundles (top-ups) as one-time in-app purchases at any time. Top-up details and pricing are displayed in the app before purchase. Each top-up is a single, non-recurring charge.</p>
+
+        <h3>Processing</h3>
+        <p>All purchases — the app, the Wilaya Plan, and top-ups — are processed through your Apple App Store or Google Play Store account. OakDev does not receive or store your payment card details; billing is handled entirely by Apple or Google.</p>
 
         <h3>Taxes</h3>
         <p>Prices may or may not include applicable taxes (such as VAT). The App Store or Play Store will display the final price inclusive of any applicable taxes based on your billing address before you confirm a purchase.</p>
-
-        <h3>Free Trials</h3>
-        <p>We may offer free trial periods for the Barakah Plan. If you do not cancel before the end of the free trial, you will be automatically charged the subscription price. Detailed trial terms are presented at the time of the offer.</p>
       </section>
 
       <!-- 08 — Refunds -->
@@ -296,10 +313,10 @@
         <h2 class="legal-section__title">Refund Policy</h2>
 
         <h3>App Store and Play Store Purchases</h3>
-        <p>All in-app purchases, including subscriptions and reflection top-ups, are processed by Apple or Google through their respective stores. <strong>Refund requests must be submitted directly to the App Store or Play Store</strong> in accordance with their refund policies:</p>
+        <p>All purchases — including the app, the Wilaya Plan, and reflection top-ups — are processed by Apple or Google through their respective stores. <strong>Refund requests must be submitted directly to the App Store or Play Store</strong> in accordance with their refund policies:</p>
         <ul>
-          <li><strong>Apple:</strong> Visit <em>reportaproblem.apple.com</em> or go to Settings → [Your Name] → Subscriptions in your Apple device.</li>
-          <li><strong>Google:</strong> Visit the Google Play Store → Profile → Payments &amp; Subscriptions → Subscriptions.</li>
+          <li><strong>Apple:</strong> Visit <em>reportaproblem.apple.com</em> or go to Settings → [Your Name] → Purchase History in your Apple device.</li>
+          <li><strong>Google:</strong> Visit the Google Play Store → Profile → Payments &amp; Subscriptions → Order History.</li>
         </ul>
 
         <h3>OakDev Direct Refunds</h3>
@@ -307,7 +324,7 @@
 
         <h3>EU/EEA Statutory Rights</h3>
         <div class="legal-highlight" style="--highlight-color: var(--color-green-bright);">
-          <strong>EU/EEA consumers:</strong> If you reside within the European Economic Area, you may have a statutory right of withdrawal under Directive 2011/83/EU. However, this right of withdrawal does not apply to digital content that has been made available and whose supply you expressly consented to begin before the expiry of the withdrawal period. By proceeding with a purchase of reflections or a subscription, you acknowledge that you are expressly requesting that digital content be made immediately available to you and that you thereby waive your right of withdrawal upon commencement of performance.
+          <strong>EU/EEA consumers:</strong> If you reside within the European Economic Area, you may have a statutory right of withdrawal under Directive 2011/83/EU. However, this right of withdrawal does not apply to digital content that has been made available and whose supply you expressly consented to begin before the expiry of the withdrawal period. By proceeding with a purchase of the app, the Wilaya Plan, or reflection top-ups, you acknowledge that you are expressly requesting that digital content be made immediately available to you and that you thereby waive your right of withdrawal upon commencement of performance.
         </div>
       </section>
 
@@ -493,7 +510,7 @@
         <h2 class="legal-section__title">Termination</h2>
 
         <h3>Termination by You</h3>
-        <p>You may stop using the Service at any time by deleting your account (see <a href="/delete-account">/delete-account</a>). If you have an active Barakah Plan subscription, cancellation of the subscription is handled through the App Store or Play Store; deleting your account does not automatically cancel your subscription.</p>
+        <p>You may stop using the Service at any time by deleting your account (see <a href="/delete-account">/delete-account</a>). Because all purchases (app, Wilaya Plan, top-ups) are one-time and non-recurring, there are no subscriptions to cancel. Any unused reflections in a deleted account are forfeited without compensation.</p>
 
         <h3>Termination by OakDev</h3>
         <p>We may suspend or permanently terminate your access to the Service, with or without notice, if we determine in our reasonable judgment that you have:</p>
@@ -586,86 +603,57 @@
   <!-- ============================================================
        FOOTER
   ============================================================ -->
-  <footer class="footer">
-    <div class="footer__inner">
-      <div class="footer__brand">
-        <img src="../assets/icon.png" alt="Ayara" class="footer__logo" />
-        <span class="footer__brand-name">Ayara</span>
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__top">
+
+        <div class="footer__brand">
+          <img src="../assets/icon.png" alt="Ayara" class="footer__logo" />
+          <p class="footer__tagline" data-i18n="footer.tagline">Wisdom of the Ahl al-Bayt — every single day.</p>
+          <p class="footer__arabic" lang="ar">يَا أَهْلَ الْبَيْتِ</p>
+        </div>
+
+        <nav class="footer__links" aria-label="Footer navigation">
+          <div class="footer__col">
+            <span class="footer__col-title" data-i18n="footer.col1">App</span>
+            <a href="/#about"      data-i18n="footer.about">About Ayara</a>
+            <a href="/#categories" data-i18n="nav.categories">Categories</a>
+            <a href="/#pricing"    data-i18n="footer.plans">Plans</a>
+            <a href="/#download"   data-i18n="footer.dl">Download</a>
+          </div>
+          <div class="footer__col">
+            <span class="footer__col-title" data-i18n="footer.col2">Legal</span>
+            <a href="/privacy"        data-i18n="footer.privacy">Privacy Policy</a>
+            <a href="/terms"          data-i18n="footer.terms">Terms of Service</a>
+            <a href="/delete-account" data-i18n="footer.delete">Delete Account</a>
+          </div>
+          <div class="footer__col">
+            <span class="footer__col-title" data-i18n="footer.col3">Help</span>
+            <a href="/support"         data-i18n="footer.support_center">Support Center</a>
+            <a href="/support#contact" data-i18n="footer.contact">Contact Us</a>
+            <a href="mailto:hello@oakdev.app" class="footer__email">hello@oakdev.app</a>
+          </div>
+        </nav>
+
       </div>
-      <nav class="footer__links" aria-label="Footer navigation">
-        <a href="/support"        class="footer__link">Support</a>
-        <a href="/privacy"        class="footer__link">Privacy Policy</a>
-        <a href="/terms"          class="footer__link footer__link--active">Terms of Service</a>
-        <a href="/delete-account" class="footer__link">Delete Account</a>
-      </nav>
-      <p class="footer__copy">
-        &copy; 2026 OakDev &amp; AI AB. All rights reserved.<br />
-        <a href="mailto:hello@oakdev.app" class="footer__email">hello@oakdev.app</a>
-      </p>
+
+      <div class="footer__bottom">
+        <p>© 2026 OakDev &amp; AI AB. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="/privacy"        data-i18n="footer.privacy">Privacy</a>
+          <a href="/terms"          data-i18n="footer.terms">Terms</a>
+          <a href="/support"        data-i18n="footer.support_center">Support</a>
+          <a href="/delete-account" data-i18n="footer.delete">Delete Account</a>
+        </div>
+      </div>
     </div>
   </footer>
 
   <!-- ============================================================
        SCRIPTS
   ============================================================ -->
+  <script src="../js/i18n.js"></script>
   <script>
-    // ── Stars ──────────────────────────────────────────────────
-    (function() {
-      const canvas = document.getElementById('starCanvas');
-      const ctx    = canvas.getContext('2d');
-      let stars    = [];
-
-      function resize() {
-        canvas.width  = window.innerWidth;
-        canvas.height = window.innerHeight;
-      }
-
-      function init() {
-        resize();
-        stars = [];
-        const count = Math.floor((canvas.width * canvas.height) / 9000);
-        const palette = ['255,255,255','194,59,90','201,168,76'];
-        for (let i = 0; i < count; i++) {
-          stars.push({
-            x:     Math.random() * canvas.width,
-            y:     Math.random() * canvas.height,
-            r:     Math.random() * 1.4 + 0.2,
-            a:     Math.random(),
-            speed: Math.random() * 0.004 + 0.001,
-            col:   palette[Math.floor(Math.random() * palette.length)]
-          });
-        }
-      }
-
-      function draw() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        stars.forEach(s => {
-          s.a += s.speed;
-          const alpha = Math.abs(Math.sin(s.a));
-          ctx.beginPath();
-          ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(${s.col},${alpha})`;
-          ctx.fill();
-        });
-        requestAnimationFrame(draw);
-      }
-
-      window.addEventListener('resize', init);
-      init();
-      draw();
-    })();
-
-    // ── Nav hamburger ──────────────────────────────────────────
-    (function() {
-      const hamburger = document.getElementById('hamburger');
-      const navLinks  = document.getElementById('navLinks');
-      hamburger.addEventListener('click', function() {
-        const open = navLinks.classList.toggle('nav__links--open');
-        hamburger.setAttribute('aria-expanded', open);
-        document.body.style.overflow = open ? 'hidden' : '';
-      });
-    })();
-
     // ── TOC active link tracking ───────────────────────────────
     (function() {
       const sections = document.querySelectorAll('.legal-section');

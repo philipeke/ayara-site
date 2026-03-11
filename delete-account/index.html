@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delete Account — Ayara</title>
+  <meta name="description" content="How to permanently delete your Ayara account and all associated data. Two easy methods — in-app or by email." />
+  <meta name="theme-color" content="#060c18" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://ayara.app/delete-account" />
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="Delete Account — Ayara" />
+  <meta property="og:description" content="Permanently delete your Ayara account and all your data in seconds — directly from the app or by email." />
+  <meta property="og:type"        content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../assets/icon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/legal.css" />
+
+  <style>
+    /* ── Delete Account page ─────────────────────────────── */
+    .delete-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 6rem;
+    }
+
+    .method-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin: 3rem 0;
+    }
+
+    .method-card {
+      background: rgba(10, 16, 36, 0.7);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      padding: 2rem;
+      backdrop-filter: blur(12px);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+    .method-card:hover { border-color: var(--color-border-mid); }
+    .method-card--primary { border-color: rgba(194,59,90,0.3); }
+    .method-card--primary:hover { border-color: rgba(194,59,90,0.5); }
+
+    .method-card__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.3rem 0.8rem;
+      border-radius: 30px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+      width: fit-content;
+    }
+    .method-card--primary .method-card__badge {
+      background: rgba(194,59,90,0.15);
+      border: 1px solid rgba(194,59,90,0.3);
+      color: var(--color-crimson-light);
+    }
+    .method-card--secondary .method-card__badge {
+      background: rgba(201,168,76,0.1);
+      border: 1px solid rgba(201,168,76,0.25);
+      color: var(--color-gold);
+    }
+
+    .method-card__icon {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .method-card__title {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--color-text);
+      margin-bottom: 0.75rem;
+    }
+
+    .method-card__steps {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.5rem;
+      flex: 1;
+    }
+    .method-card__steps li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--color-border);
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+      line-height: 1.5;
+    }
+    .method-card__steps li:last-child { border-bottom: none; }
+    .step-num {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      background: rgba(194,59,90,0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--color-crimson-light);
+      margin-top: 0.1rem;
+    }
+    .method-card--secondary .step-num {
+      background: rgba(201,168,76,0.12);
+      color: var(--color-gold);
+    }
+
+    .method-card__cta {
+      display: block;
+      text-align: center;
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius-md);
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    .method-card--primary .method-card__cta {
+      background: rgba(194,59,90,0.15);
+      border: 1px solid rgba(194,59,90,0.3);
+      color: var(--color-crimson-light);
+    }
+    .method-card--primary .method-card__cta:hover {
+      background: rgba(194,59,90,0.25);
+    }
+    .method-card--secondary .method-card__cta {
+      background: rgba(201,168,76,0.1);
+      border: 1px solid rgba(201,168,76,0.25);
+      color: var(--color-gold);
+    }
+    .method-card--secondary .method-card__cta:hover {
+      background: rgba(201,168,76,0.18);
+    }
+
+    .warning-box {
+      background: rgba(194,59,90,0.07);
+      border: 1px solid rgba(194,59,90,0.2);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem 1.5rem;
+      margin: 2rem 0;
+      font-size: 0.92rem;
+      color: var(--color-text-muted);
+      line-height: 1.75;
+    }
+    .warning-box strong { color: var(--color-crimson-light); }
+
+    .data-list {
+      background: rgba(10, 16, 36, 0.5);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+    }
+    .data-list h3 {
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      color: var(--color-text);
+      margin-bottom: 1rem;
+    }
+    .data-list ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem 2rem;
+    }
+    .data-list ul li {
+      font-size: 0.88rem;
+      color: var(--color-text-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .data-list ul li::before {
+      content: '✓';
+      color: var(--color-green-bright);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .contact-alt {
+      margin-top: 3rem;
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid var(--color-border);
+    }
+    .contact-alt p {
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .contact-alt a {
+      color: var(--color-crimson-light);
+      text-decoration: underline;
+    }
+
+    @media (max-width: 680px) {
+      .method-grid { grid-template-columns: 1fr; }
+      .data-list ul { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Star canvas -->
+  <canvas class="star-canvas" id="starCanvas" aria-hidden="true"></canvas>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav class="nav nav--scrolled" id="nav" role="navigation" aria-label="Main">
+    <div class="nav__container">
+      <a href="/" class="nav__logo" aria-label="Ayara — Home">
+        <img src="../assets/icon.png" alt="Ayara" class="nav__logo-img" />
+        <span class="nav__logo-name">Ayara</span>
+      </a>
+      <div class="nav__links" id="navLinks">
+        <a href="/#about"      class="nav__link" data-i18n="nav.about">About</a>
+        <a href="/#categories" class="nav__link" data-i18n="nav.categories">Categories</a>
+        <a href="/#pricing"    class="nav__link" data-i18n="nav.plans">Plans</a>
+        <a href="/support"     class="nav__link" data-i18n="nav.support">Support</a>
+      </div>
+      <div class="nav__right">
+        <div class="nav__lang" id="langSwitcher">
+          <button class="nav__lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
+            <span class="lang-flag" id="langFlag">🇬🇧</span>
+            <span class="lang-code" id="langCode">EN</span>
+            <span class="lang-chevron" aria-hidden="true">▾</span>
+          </button>
+          <div class="nav__lang-dropdown" id="langDropdown" role="listbox" aria-label="Select language">
+            <button class="nav__lang-option" data-lang="en" role="option"><span class="opt-flag">🇬🇧</span><span class="opt-name">English</span></button>
+            <button class="nav__lang-option" data-lang="ar" role="option"><span class="opt-flag">🇸🇦</span><span class="opt-name">العربية</span></button>
+            <button class="nav__lang-option" data-lang="fa" role="option"><span class="opt-flag">🇮🇷</span><span class="opt-name">فارسی</span></button>
+            <button class="nav__lang-option" data-lang="ur" role="option"><span class="opt-flag">🇵🇰</span><span class="opt-name">اردو</span></button>
+            <button class="nav__lang-option" data-lang="tr" role="option"><span class="opt-flag">🇹🇷</span><span class="opt-name">Türkçe</span></button>
+            <button class="nav__lang-option" data-lang="id" role="option"><span class="opt-flag">🇮🇩</span><span class="opt-name">Indonesia</span></button>
+            <button class="nav__lang-option" data-lang="fr" role="option"><span class="opt-flag">🇫🇷</span><span class="opt-name">Français</span></button>
+            <button class="nav__lang-option" data-lang="az" role="option"><span class="opt-flag">🇦🇿</span><span class="opt-name">Azərbaycanca</span></button>
+          </div>
+        </div>
+        <a href="/#download" class="btn btn--crimson nav__cta" data-i18n="nav.download">Download</a>
+        <button class="nav__hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       PAGE HERO
+  ============================================================ -->
+  <header class="page-hero" role="banner">
+    <div class="page-hero__inner">
+      <div class="page-hero__badge" data-i18n="delete.badge">Account</div>
+      <h1 class="page-hero__title" data-i18n="delete.title">Delete Your Account</h1>
+      <p class="page-hero__subtitle" data-i18n="delete.subtitle">
+        You have the right to permanently delete your account and all associated data at any time — no questions asked.
+      </p>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       MAIN CONTENT
+  ============================================================ -->
+  <div class="container">
+    <div class="delete-wrap">
+
+      <!-- Warning -->
+      <div class="warning-box">
+        <strong data-i18n="delete.warning_title">This action is permanent and cannot be undone.</strong>
+        <span data-i18n="delete.warning_body"> Deleting your account will permanently erase all your data, your reflection balance, and your content history. Any unused reflections will be forfeited. There is no grace period — once confirmed in the app, deletion begins immediately.</span>
+      </div>
+
+      <!-- Method cards -->
+      <h2 style="font-family: var(--font-heading); font-size: 1.3rem; color: var(--color-text); margin-bottom: 0.25rem;" data-i18n="delete.methods_title">Choose How to Delete</h2>
+      <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-bottom: 0;" data-i18n="delete.methods_sub">The in-app method is the fastest and easiest.</p>
+
+      <div class="method-grid">
+
+        <!-- In-app -->
+        <div class="method-card method-card--primary">
+          <div class="method-card__badge" data-i18n="delete.method1_badge">⚡ Recommended</div>
+          <div class="method-card__icon">📱</div>
+          <div class="method-card__title" data-i18n="delete.method1_title">Delete in the App</div>
+          <ol class="method-card__steps">
+            <li><span class="step-num">1</span><span data-i18n="delete.step1">Open the Ayara app on your device.</span></li>
+            <li><span class="step-num">2</span><span data-i18n="delete.step2">Tap <strong>Settings</strong> (bottom of the main screen).</span></li>
+            <li><span class="step-num">3</span><span data-i18n="delete.step3">Scroll all the way to the bottom.</span></li>
+            <li><span class="step-num">4</span><span data-i18n="delete.step4">Tap <strong>Delete Account</strong>.</span></li>
+            <li><span class="step-num">5</span><span data-i18n="delete.step5">Confirm the deletion. Your account and all data are permanently erased.</span></li>
+          </ol>
+          <a href="/#download" class="method-card__cta" data-i18n="delete.method1_cta">Open Ayara</a>
+        </div>
+
+        <!-- Email -->
+        <div class="method-card method-card--secondary">
+          <div class="method-card__badge" data-i18n="delete.method2_badge">✉ By Email</div>
+          <div class="method-card__icon">📧</div>
+          <div class="method-card__title" data-i18n="delete.method2_title">Request via Email</div>
+          <ol class="method-card__steps">
+            <li><span class="step-num">1</span><span data-i18n="delete.estep1">Send an email to <strong>hello@oakdev.app</strong>.</span></li>
+            <li><span class="step-num">2</span><span data-i18n="delete.estep2">Use the subject: <strong>"Delete Account"</strong>.</span></li>
+            <li><span class="step-num">3</span><span data-i18n="delete.estep3">Include the email address linked to your Ayara account so we can identify it.</span></li>
+            <li><span class="step-num">4</span><span data-i18n="delete.estep4">We will process your request and confirm deletion within <strong>30 days</strong>.</span></li>
+          </ol>
+          <a href="mailto:hello@oakdev.app?subject=Delete%20Account" class="method-card__cta" data-i18n="delete.method2_cta">Email Us</a>
+        </div>
+
+      </div>
+
+      <!-- What gets deleted -->
+      <div class="data-list">
+        <h3 data-i18n="delete.data_title">What Gets Deleted</h3>
+        <ul>
+          <li data-i18n="delete.data1">Your account and login credentials</li>
+          <li data-i18n="delete.data2">Your email address</li>
+          <li data-i18n="delete.data3">Your reflection balance</li>
+          <li data-i18n="delete.data4">Your content and reflection history</li>
+          <li data-i18n="delete.data5">Your app settings and preferences</li>
+          <li data-i18n="delete.data6">Any support messages you sent us</li>
+        </ul>
+      </div>
+
+      <!-- GDPR note -->
+      <div class="legal-highlight" style="--highlight-color: var(--color-green-bright);">
+        <strong data-i18n="delete.gdpr_title">Your GDPR rights.</strong>
+        <span data-i18n="delete.gdpr_body"> As a user, you have the right to erasure ("right to be forgotten") under Article 17 of the GDPR. Deleting your account fully satisfies this right. If you have any questions about how your data is handled, please read our <a href="/privacy" style="color: inherit; text-decoration: underline;">Privacy Policy</a> or contact us at <a href="mailto:hello@oakdev.app" style="color: inherit; text-decoration: underline;">hello@oakdev.app</a>.</span>
+      </div>
+
+      <!-- Contact alt -->
+      <div class="contact-alt">
+        <p data-i18n="delete.questions">Have questions or need help? We are here.</p>
+        <a href="mailto:hello@oakdev.app">hello@oakdev.app</a>
+        &nbsp;·&nbsp;
+        <a href="/support" data-i18n="delete.support_link">Support Center</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <img src="../assets/icon.png" alt="Ayara" class="footer__logo" />
+          <p class="footer__tagline" data-i18n="footer.tagline">Wisdom of the Ahl al-Bayt — every single day.</p>
+          <p class="footer__arabic" lang="ar">يَا أَهْلَ الْبَيْتِ</p>
+        </div>
+        <nav class="footer__links" aria-label="Footer navigation">
+          <div class="footer__col">
+            <span class="footer__col-title" data-i18n="footer.col1">App</span>
+            <a href="/#about"      data-i18n="footer.about">About Ayara</a>
+            <a href="/#categories" data-i18n="nav.categories">Categories</a>
+            <a href="/#pricing"    data-i18n="footer.plans">Plans</a>
+            <a href="/#download"   data-i18n="footer.dl">Download</a>
+          </div>
+          <div class="footer__col">
+            <span class="footer__col-title" data-i18n="footer.col2">Legal</span>
+            <a href="/privacy"        data-i18n="footer.privacy">Privacy Policy</a>
+            <a href="/terms"          data-i18n="footer.terms">Terms of Service</a>
+            <a href="/delete-account" data-i18n="footer.delete">Delete Account</a>
+          </div>
+          <div class="footer__col">
+            <span class="footer__col-title" data-i18n="footer.col3">Help</span>
+            <a href="/support"         data-i18n="footer.support_center">Support Center</a>
+            <a href="/support#contact" data-i18n="footer.contact">Contact Us</a>
+            <a href="mailto:hello@oakdev.app" class="footer__email">hello@oakdev.app</a>
+          </div>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 OakDev &amp; AI AB. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="/privacy"        data-i18n="footer.privacy">Privacy</a>
+          <a href="/terms"          data-i18n="footer.terms">Terms</a>
+          <a href="/support"        data-i18n="footer.support_center">Support</a>
+          <a href="/delete-account" data-i18n="footer.delete">Delete Account</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/i18n.js"></script>
+
+</body>
+</html>

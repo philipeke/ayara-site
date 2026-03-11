@@ -419,7 +419,7 @@ body::after {
   margin-bottom: 2rem;
 }
 .hero__logo {
-  height: 160px;
+  height: 220px;
   width: auto;
   filter: drop-shadow(0 0 32px rgba(194,59,90,0.25));
 }
@@ -1691,6 +1691,6 @@ body::after {
   .daily-grid { grid-template-columns: 1fr; }
   .download__buttons { flex-direction: column; align-items: center; }
   .cookie-banner__inner { flex-direction: column; }
-  .hero__logo { height: 110px; }
+  .hero__logo { height: 160px; }
   .hero__bismillah { font-size: 1.35rem; }
 }

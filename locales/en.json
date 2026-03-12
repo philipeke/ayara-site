@@ -63,7 +63,11 @@
     "f13_title": "Islamic Calendar",
     "f13_text": "Stay aligned with the Hijri year. See holy months, Shia commemorations, and the birthdays and martyrdom dates of the 14 Masumeen — so every sacred day is always within sight.",
     "f14_title": "Duas & Ziyarat",
-    "f14_text": "Draw closer to Allah and the Masumeen through the sacred words they left for us. Authentic duas and ziyarat from the Ahl al-Bayt tradition — for every need, every occasion, and every longing of the heart."
+    "f14_text": "Draw closer to Allah and the Masumeen through the sacred words they left for us. Authentic duas and ziyarat from the Ahl al-Bayt tradition — for every need, every occasion, and every longing of the heart.",
+    "f15_title": "Hajj & Umrah Guide",
+    "f15_text": "Prepare for the sacred journey with step-by-step guidance through every rite of Hajj and Umrah — from Ihram and Tawaf to Sa'i and beyond — rooted in the Shia tradition.",
+    "f16_title": "Dua Audio Player",
+    "f16_text": "Listen to beautiful recitations of the most beloved duas — Dua Kumayl, Dua Nudba, Dua al-Faraj, and more. Let the sacred words of the Masumeen wash over your heart wherever you are."
   },
   "daily": {
     "label": "What Awaits You Each Day",
@@ -116,7 +120,7 @@
   "spotlight": {
     "label": "Complete Islamic Companion",
     "title": "More Than Reflection — <em>Complete</em> in Every Way",
-    "subtitle": "Alongside your daily wisdom and personal reflections from the Ahl al-Bayt, eight powerful tools are always at your fingertips.",
+    "subtitle": "Alongside your daily wisdom and personal reflections from the Ahl al-Bayt, ten powerful tools are always at your fingertips.",
     "ask_tag": "1 Reflection",
     "ask_title": "Ask Ayara Anything",
     "ask_text": "A question about your deen. A hardship weighing on your heart. Something you've always wondered about in Islam. Ask it freely — Ayara responds with a thoughtful, personalised answer rooted in the authentic Shia tradition. One reflection spent, one answer received, crafted directly for you.",
@@ -164,7 +168,19 @@
     "duas_text": "Access a curated collection of authentic duas and ziyarat from the Ahl al-Bayt tradition. From Dua Kumayl to Ziyarat Ashura — the sacred words of the Masumeen, presented clearly in Arabic with translation, for every occasion and every longing of the heart.",
     "duas_li1": "Authentic duas from the Imams (AS) with translations",
     "duas_li2": "Ziyarat for the Masumeen — Ashura, Warith, and more",
-    "duas_li3": "For daily, weekly, and seasonal occasions"
+    "duas_li3": "For daily, weekly, and seasonal occasions",
+    "hajj_tag": "Wilaya · New",
+    "hajj_title": "Hajj & Umrah Guide",
+    "hajj_text": "Prepare for the most sacred journey of your life with a complete, step-by-step guide to every rite of Hajj and Umrah — from entering Ihram at the Miqat to the final Tawaf al-Wida — presented according to the Shia tradition and the guidance of the Imams.",
+    "hajj_li1": "Full Hajj Tamattu' and Umrah rites, step by step",
+    "hajj_li2": "Duas and prayers for each ritual act",
+    "hajj_li3": "Rooted in the Shia jurisprudence tradition",
+    "audio_tag": "Wilaya · New",
+    "audio_title": "Dua Audio Player",
+    "audio_text": "Let the voice of the beloved duas fill your heart. Listen to recitations of Dua Kumayl, Dua Nudba, Dua al-Faraj, Ziyarat Ashura, and more — with Arabic text and translation following along so you are always present with every sacred word.",
+    "audio_li1": "Audio recitations of Dua Kumayl, Nudba, Faraj & more",
+    "audio_li2": "Arabic text and translation scroll with the audio",
+    "audio_li3": "Listen anywhere — offline playback supported"
   },
   "verse2": {
     "text": "\"Never shall we submit to humiliation. Allah refuses it for us, His Messenger refuses it, and so do the believers.\"",
